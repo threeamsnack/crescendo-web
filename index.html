@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crescendo'24</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav><img id="logo" src="/crescendo-logo-removebg-preview.png" alt=""></nav>
+  <model-viewer id="sscbs-model" src="sscbs-models/sscbs.glb" interpolation-decay="200" disable-tap disable-zoom camera-controls
+    touch-action="pan-y" camera-orbit="0deg -150deg 20m" shadow-intensity="5" ar skybox-image="/skybox/eso0932a (1).jpg"
+     auto-rotate max-camera-orbit="150deg 80.5deg 0m" max-field-of-view="180deg"
+    skybox-height="100m"> </model-viewer>
+
+
+  <audio id="audio" src="/Interstellar.mp3" autoplay loop ></audio>
+
+  <div>
+    <i class="fa fa-volume-off" id="mute-btn" aria-hidden="true" style="display:none" onclick="toggleMute()"></i>
+    <i class="fa fa-volume-down" id="unmute-btn" aria-hidden="true" onclick="toggleMute()"></i>
+    <i class="fa fa-arrows-alt fullscreen-button" aria-hidden="true" onclick="toggleFullScreen()"></i>
+    <i class="fa fa-compress compress-btn" aria-hidden="true" onclick="toggleFullScreen()"></i>
+  </div>
+  
+
+
+  <script src="script.js"></script>
+  <script src="camera.js"></script>
+</body>
+
+</html>
