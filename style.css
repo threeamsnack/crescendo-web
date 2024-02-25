@@ -1,199 +1,228 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@font-face {
+  font-family: "chakrapetch";
+  src: url("chakrapetch/ChakraPetch-Bold.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "venusrising";
+  src: url("fonts/venus\ rising\ rg.otf") format("opentype");
+}
 
 body {
-    margin: 0;
-    background-color: #000;
+  margin: 0;
+  background-color: #000;
+}
+
+model-viewer {
+  width: 100%;
+  height: 100vh;
+}
+
+.home-frame {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+}
+
+#landing-container {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-top: 3rem;
+}
+
+@media (max-height: 425px) {
+  #landing-container {
+    margin-top: 11rem;
   }
+}
 
-  model-viewer {
-    width: 100%;
-    height: 100vh;
-  }
+#landing-text-container {
+  width: 538px;
+  margin-left: 8%;
+}
 
-  .home-frame {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    pointer-events: none;
-  }
+#landing-text {
+  color: #fff;
+  font-size: 37px;
+  font-family: venusrising;
+  width: 538px;
+    height: 340px;
+    line-height: 53px;
+}
 
-  .navbtn-stack {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 359px;
-    height: 278px;
-    margin-top: auto;
-    margin-bottom: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 98px;
-    pointer-events: auto;
-  }
+.navbtn-stack {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 400px;
+  height: 278px;
+  pointer-events: auto;
+  justify-items: center;
+  margin-right: 4%;
+  align-self: center;
+}
 
-  nav {
-    background-color: #000;
-    height: 104px;
-    position: fixed;
-    z-index: 1;
-    width: -webkit-fill-available;
-    text-align: center;
-    background: linear-gradient(275deg, rgb(255 255 255 / 40%) -135%, rgba(0, 0, 0, 1) 50%, rgb(255 252 252 / 40%) 219%);
-  }
+nav {
+  background-color: #000;
+  height: 104px;
+  position: fixed;
+  z-index: 1;
+  width: -webkit-fill-available;
+  text-align: center;
+  background: linear-gradient(
+    275deg,
+    rgb(255 255 255 / 40%) -135%,
+    rgba(0, 0, 0, 1) 50%,
+    rgb(255 252 252 / 40%) 219%
+  );
+}
 
-  #logo {
-    width: 27rem;
-    margin-top: 15px;
-    margin-left: 68px;
-  }
+#logo {
+  width: 27rem;
+  margin-top: 15px;
+  margin-left: 68px;
+}
 
+.fa-volume-off,
+.fa-volume-down,
+.fa-arrows-alt,
+.fa-compress {
+  color: white;
+  width: 2rem;
+  position: fixed;
+  z-index: 999;
+  bottom: 40px;
+  left: 8%;
+  font-size: 50px;
+  pointer-events: auto;
+}
 
-  .fa-volume-off,
-  .fa-volume-down,
-  .fa-arrows-alt,
-  .fa-compress {
-    color: white;
-    width: 2rem;
-    position: fixed;
-    z-index: 1005;
-    bottom: 40px;
-    left: 8%;
-    font-size: 50px;
-  }
+.fa-arrows-alt {
+  font-size: 33px;
+  bottom: 50px;
+  margin-left: 3.5rem;
+}
 
-  .fa-arrows-alt {
-    font-size: 33px;
-    bottom: 50px;
-    margin-left: 3.5rem;
-  }
-
-  .compress-btn {
-    margin-left: 3.5rem;
+.compress-btn {
+  margin-left: 3.5rem;
   font-size: 36px;
   bottom: 47px;
   display: none;
-  }
+}
 
+[class*="btn-glitch-"] {
+  display: inline-block;
+  font-family: "VT323", monospace;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 13px;
+  min-width: 175px;
+  line-height: 1.5em;
+  white-space: no-wrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 225px;
+  height: 26px;
+  background-color: #262626;
+}
+[class*="btn-glitch-"] .text,
+[class*="btn-glitch-"] .decoration {
+  display: inline-block;
+}
+[class*="btn-glitch-"] .decoration {
+  display: inline-block;
+  float: right;
+}
+[class*="btn-glitch-"]:hover,
+[class*="btn-glitch-"]:focus {
+  animation-name: glitch;
+  animation-duration: 0.2s;
+  background-color: yellow;
+  color: black;
+  border: 1px solid yellow;
+}
+[class*="btn-glitch-"]:hover .text-decoration,
+[class*="btn-glitch-"]:focus .text-decoration {
+  animation-name: blink;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+[class*="btn-glitch-"]:hover .decoration,
+[class*="btn-glitch-"]:focus .decoration {
+  animation-name: blink;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+[class*="btn-glitch-"]:hover :before,
+[class*="btn-glitch-"]:focus :before {
+  content: " ";
+  width: 15px;
+  border: 1px solid black;
+  position: absolute;
+  right: 25%;
+  bottom: 3px;
+  transform: rotate(35deg);
+}
 
-  [class*="btn-glitch-"] {
-    display: inline-block;
-    font-family: "VT323", monospace;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 10px 13px;
-    min-width: 175px;
-    line-height: 1.5em;
-    white-space: no-wrap;
-    text-transform: uppercase;
-    cursor: pointer;
-    width: 225px;
-    height: 26px;
+[class*="btn-glitch-"]:active {
+  background: none;
+  color: yellow;
+}
+[class*="btn-glitch-"]:active .text-decoration {
+  animation-name: none;
+}
+[class*="btn-glitch-"]:active .decoration {
+  animation-name: none;
+}
+[class*="btn-glitch-"]:active :before,
+[class*="btn-glitch-"]:active :after {
+  display: none;
+}
+
+@keyframes glitch {
+  25% {
+    background-color: red;
+    transform: translateX(-10px);
+    letter-spacing: 10px;
   }
-  [class*="btn-glitch-"] .text,
-  [class*="btn-glitch-"] .decoration {
-    display: inline-block;
+  35% {
+    background-color: green;
+    transform: translate(10px);
   }
-  [class*="btn-glitch-"] .decoration {
-    display: inline-block;
-    float: right;
+  59% {
+    opacity: 0;
   }
-  [class*="btn-glitch-"]:hover,
-  [class*="btn-glitch-"]:focus {
-    animation-name: glitch;
-    animation-duration: 0.2s;
+  60% {
+    background-color: blue;
+    transform: translate(-10px);
+    filter: blur(5px);
+  }
+  100% {
     background-color: yellow;
-    color: black;
-    border: 1px solid yellow;
+    blur: 5px;
   }
-  [class*="btn-glitch-"]:hover .text-decoration,
-  [class*="btn-glitch-"]:focus .text-decoration {
-    animation-name: blink;
-    animation-duration: 0.1s;
-    animation-iteration-count: infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-  [class*="btn-glitch-"]:hover .decoration,
-  [class*="btn-glitch-"]:focus .decoration {
-    animation-name: blink;
-    animation-duration: 0.1s;
-    animation-iteration-count: infinite;
+}
+@keyframes shrink {
+  100% {
+    width: 10%;
   }
-  [class*="btn-glitch-"]:hover :before,
-  [class*="btn-glitch-"]:focus :before {
-    content: " ";
-    width: 15px;
-    border: 1px solid black;
-    position: absolute;
-    right: 25%;
-    bottom: 3px;
-    transform: rotate(35deg);
-  }
-  [class*="btn-glitch-"]:hover :after,
-  [class*="btn-glitch-"]:focus :after {
-    animation-name: shrink;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    content: " ";
-    width: 75%;
-    border: 1px solid black;
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-  }
-  [class*="btn-glitch-"]:active {
-    background: none;
-    color: yellow;
-  }
-  [class*="btn-glitch-"]:active .text-decoration {
-    animation-name: none;
-  }
-  [class*="btn-glitch-"]:active .decoration {
-    animation-name: none;
-  }
-  [class*="btn-glitch-"]:active :before,
-  [class*="btn-glitch-"]:active :after {
-    display: none;
-  }
-  
-  @keyframes glitch {
-    25% {
-      background-color: red;
-      transform: translateX(-10px);
-      letter-spacing: 10px;
-    }
-    35% {
-      background-color: green;
-      transform: translate(10px);
-    }
-    59% {
-      opacity: 0;
-    }
-    60% {
-      background-color: blue;
-      transform: translate(-10px);
-      filter: blur(5px);
-    }
-    100% {
-      background-color: yellow;
-      blur: 5px;
-    }
-  }
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-  @keyframes shrink {
-    100% {
-      width: 10%;
-    }
-  }
-  
-  /* MIT Licence of buttons used */
-  /*
+}
+
+/* MIT Licence of buttons used */
+/*
    * MIT License
    * 
    * Copyright (c) 2024 Zach  (https://codepen.io/hirodashi/pen/YzGBYBY)
@@ -216,4 +245,3 @@ body {
    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
    * SOFTWARE.
    */
-  

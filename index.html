@@ -13,38 +13,46 @@
 <body>
 
   <nav><img id="logo" src="/crescendo-logo-removebg-preview.png" alt=""></nav>
-  <model-viewer id="sscbs-model" src="sscbs-models/sscbs.glb" interpolation-decay="200" disable-tap disable-zoom camera-controls
-    touch-action="pan-y" camera-orbit="0deg -150deg 20m" shadow-intensity="5" ar skybox-image="/skybox/eso0932a (1).jpg"
-     auto-rotate max-camera-orbit="150deg 80.5deg 0m" max-field-of-view="180deg"
-    skybox-height="100m"> </model-viewer>
+  <model-viewer id="sscbs-model" src="sscbs-models/sscbs.glb" interpolation-decay="200" disable-tap disable-zoom
+    camera-controls touch-action="pan-y" camera-orbit="0deg -150deg 20m" shadow-intensity="5"
+    ar skybox-image="/skybox/eso0932a (1).jpg" auto-rotate
+    max-camera-orbit="150deg 80.5deg 0m" max-field-of-view="180deg" skybox-height="100m"> </model-viewer>
 
 
   <div class="home-frame">
-    <div class="navbtn-stack">
-      <a class="btn-glitch-fill">
-        <span class="text">// About</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
-      </a>
-      <a class="btn-glitch-fill">
-        <span class="text">// Events</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
-      </a>
-      <a class="btn-glitch-fill">
-        <span class="text">// Past</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
-      </a>
-      <a class="btn-glitch-fill">
-        <span class="text">// Contact</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
-      </a>
+    <div id="landing-container">
+      <div id="landing-text-container">
+        <h1 id="landing-text">The Annual Cultural Fest of Shaheed Sukhdev College of Business Studies</h1>
+      </div>
+      <div class="navbtn-stack">
+        <a class="btn-glitch-fill">
+          <span class="text">// About</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
+        </a>
+        <a class="btn-glitch-fill">
+          <span class="text">// Events</span><span class="text-decoration">_</span><span
+            class="decoration">&rArr;</span>
+        </a>
+        <a class="btn-glitch-fill">
+          <span class="text">// Past</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
+        </a>
+        <a class="btn-glitch-fill">
+          <span class="text">// Contact</span><span class="text-decoration">_</span><span
+            class="decoration">&rArr;</span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <i class="fa fa-volume-off" id="mute-btn" aria-hidden="true" style="display:none" onclick="toggleMute()"></i>
+      <i class="fa fa-volume-down" id="unmute-btn" aria-hidden="true" onclick="toggleMute()"></i>
+      <i class="fa fa-arrows-alt fullscreen-button" aria-hidden="true" onclick="toggleFullScreen()"></i>
+      <i class="fa fa-compress compress-btn" aria-hidden="true" onclick="toggleFullScreen()"></i>
     </div>
   </div>
 
-  <audio id="audio" src="/Interstellar.mp3" autoplay loop ></audio>
+  <audio id="audio" src="/Interstellar.mp3" autoplay loop></audio>
 
-  <div>
-    <i class="fa fa-volume-off" id="mute-btn" aria-hidden="true" style="display:none" onclick="toggleMute()"></i>
-    <i class="fa fa-volume-down" id="unmute-btn" aria-hidden="true" onclick="toggleMute()"></i>
-    <i class="fa fa-arrows-alt fullscreen-button" aria-hidden="true" onclick="toggleFullScreen()"></i>
-    <i class="fa fa-compress compress-btn" aria-hidden="true" onclick="toggleFullScreen()"></i>
-  </div>
-  
+
+
 
 
   <script src="script.js"></script>
