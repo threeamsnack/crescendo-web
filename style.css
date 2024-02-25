@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+
 body {
     margin: 0;
     background-color: #000;
@@ -6,6 +9,29 @@ body {
   model-viewer {
     width: 100%;
     height: 100vh;
+  }
+
+  .home-frame {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+  }
+
+  .navbtn-stack {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 359px;
+    height: 278px;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 98px;
+    pointer-events: auto;
   }
 
   nav {
@@ -50,3 +76,144 @@ body {
   bottom: 47px;
   display: none;
   }
+
+
+  [class*="btn-glitch-"] {
+    display: inline-block;
+    font-family: "VT323", monospace;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 13px;
+    min-width: 175px;
+    line-height: 1.5em;
+    white-space: no-wrap;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 225px;
+    height: 26px;
+  }
+  [class*="btn-glitch-"] .text,
+  [class*="btn-glitch-"] .decoration {
+    display: inline-block;
+  }
+  [class*="btn-glitch-"] .decoration {
+    display: inline-block;
+    float: right;
+  }
+  [class*="btn-glitch-"]:hover,
+  [class*="btn-glitch-"]:focus {
+    animation-name: glitch;
+    animation-duration: 0.2s;
+    background-color: yellow;
+    color: black;
+    border: 1px solid yellow;
+  }
+  [class*="btn-glitch-"]:hover .text-decoration,
+  [class*="btn-glitch-"]:focus .text-decoration {
+    animation-name: blink;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+  }
+  [class*="btn-glitch-"]:hover .decoration,
+  [class*="btn-glitch-"]:focus .decoration {
+    animation-name: blink;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+  }
+  [class*="btn-glitch-"]:hover :before,
+  [class*="btn-glitch-"]:focus :before {
+    content: " ";
+    width: 15px;
+    border: 1px solid black;
+    position: absolute;
+    right: 25%;
+    bottom: 3px;
+    transform: rotate(35deg);
+  }
+  [class*="btn-glitch-"]:hover :after,
+  [class*="btn-glitch-"]:focus :after {
+    animation-name: shrink;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    content: " ";
+    width: 75%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+  }
+  [class*="btn-glitch-"]:active {
+    background: none;
+    color: yellow;
+  }
+  [class*="btn-glitch-"]:active .text-decoration {
+    animation-name: none;
+  }
+  [class*="btn-glitch-"]:active .decoration {
+    animation-name: none;
+  }
+  [class*="btn-glitch-"]:active :before,
+  [class*="btn-glitch-"]:active :after {
+    display: none;
+  }
+  
+  @keyframes glitch {
+    25% {
+      background-color: red;
+      transform: translateX(-10px);
+      letter-spacing: 10px;
+    }
+    35% {
+      background-color: green;
+      transform: translate(10px);
+    }
+    59% {
+      opacity: 0;
+    }
+    60% {
+      background-color: blue;
+      transform: translate(-10px);
+      filter: blur(5px);
+    }
+    100% {
+      background-color: yellow;
+      blur: 5px;
+    }
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes shrink {
+    100% {
+      width: 10%;
+    }
+  }
+  
+  /* MIT Licence of buttons used */
+  /*
+   * MIT License
+   * 
+   * Copyright (c) 2024 Zach  (https://codepen.io/hirodashi/pen/YzGBYBY)
+   * 
+   * Permission is hereby granted, free of charge, to any person obtaining a copy
+   * of this software and associated documentation files (the "Software"), to deal
+   * in the Software without restriction, including without limitation the rights
+   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   * copies of the Software, and to permit persons to whom the Software is
+   * furnished to do so, subject to the following conditions:
+   * 
+   * The above copyright notice and this permission notice shall be included in all
+   * copies or substantial portions of the Software.
+   * 
+   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   * SOFTWARE.
+   */
+  
