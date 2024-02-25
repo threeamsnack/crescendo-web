@@ -12,6 +12,7 @@
 body {
   margin: 0;
   background-color: #000;
+  overflow: hidden;
 }
 
 model-viewer {
@@ -37,9 +38,10 @@ model-viewer {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   margin-top: 3rem;
+  gap: 3rem;
 }
 
-@media (max-height: 425px) {
+@media (max-height: 540px) {
   #landing-container {
     margin-top: 11rem;
   }
@@ -55,8 +57,8 @@ model-viewer {
   font-size: 37px;
   font-family: venusrising;
   width: 538px;
-    height: 340px;
-    line-height: 53px;
+  height: 340px;
+  line-height: 53px;
 }
 
 .navbtn-stack {
@@ -67,7 +69,7 @@ model-viewer {
   pointer-events: auto;
   justify-items: center;
   margin-right: 4%;
-  align-self: center;
+  row-gap: 24px;
 }
 
 nav {
@@ -132,6 +134,7 @@ nav {
   width: 225px;
   height: 26px;
   background-color: #262626;
+  font-size: larger;
 }
 [class*="btn-glitch-"] .text,
 [class*="btn-glitch-"] .decoration {
@@ -245,3 +248,67 @@ nav {
    * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
    * SOFTWARE.
    */
+
+.slideup {
+  position: absolute;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+  text-align: center;
+  bottom: 0;
+  height: 78vh;
+  z-index: 1000;
+}
+.slideup.open {
+  top: 104px;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+.slideup .buttons {
+  background: yellow;
+  height: 60px;
+}
+.slideup .buttons button {
+  height: 20px;
+  margin: 20px 10px;
+}
+.slideup .content {
+  background: yellow;
+  height: 100px;
+}
+.button1.selected {
+  color: red;
+}
+.closeall {
+  position: absolute;
+  right: 20px;
+}
+
+@media screen and (min-height: 900px) {
+  .slideup .buttons {
+    background: green;
+  }
+  .bottom-spacer {
+    height: 160px;
+  }
+  .slideup {
+    bottom: 0;
+  }
+  .canvas {
+    height: calc(100vh - 220px);
+  }
+  .closeall {
+    display: none;
+  }
+}
+.about,
+.events,
+.sponsers,
+.past,
+.contact {
+  display: none;
+  height: 100vh;
+  background-color:  #262626;
+  color: #fff;
+ 
+}
