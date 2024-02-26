@@ -1,21 +1,21 @@
 (() => {
-    
-// script to interpolate between various points
-    const modelViewer = document.querySelector('#e-summit');
-    const orbitCycle = [
-      '-25deg 70deg 20m',
-      '0deg -150deg 20m',
-      '25deg 70deg 20m',
-      modelViewer.cameraOrbit
-    ];
-    setInterval(() => {
-      const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
-      modelViewer.cameraOrbit =
-          orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
-    }, 3000);
-  })();
-  
-  
+
+    // script to interpolate between various points
+//     const modelViewer = document.querySelector('#sscbs-model');
+//     const orbitCycle = [
+//         '-25deg 70deg 20m',
+//         '0deg -150deg 20m',
+//         '25deg 70deg 20m',
+//         modelViewer.cameraOrbit
+//     ];
+//     setInterval(() => {
+//         const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+//         modelViewer.cameraOrbit =
+//             orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+//     }, 3000);
+// })();
+
+
 
 const modelViewer = document.querySelector("#sscbs-model");
 let lastX;

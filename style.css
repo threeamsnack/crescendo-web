@@ -90,7 +90,6 @@ nav {
 #logo {
   width: 27rem;
   margin-top: 15px;
-  margin-left: 68px;
 }
 
 .fa-volume-off,
@@ -168,11 +167,11 @@ nav {
 [class*="btn-glitch-"]:focus :before {
   content: " ";
   width: 15px;
-  border: 1px solid black;
   position: absolute;
   right: 25%;
   bottom: 3px;
   transform: rotate(35deg);
+  margin-top: -2px;
 }
 
 [class*="btn-glitch-"]:active {
