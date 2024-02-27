@@ -1,4 +1,4 @@
-var txt = 'The Annual Cultural Fest of Shaheed Sukhdev College of Business Studies';
+var txt = 'The Annual Cultural Fest of \nShaheed \nSukhdev College \nof Business \nStudies';
 var speed = 70;
 
 function typeWriter() {

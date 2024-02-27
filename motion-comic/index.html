@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+        @font-face {
+            font-family: "chakrapetch";
+            src: url("chakrapetch/ChakraPetch-Bold.ttf") format("truetype");
+        }
+
+        @font-face {
+            font-family: "venusrising";
+            src: url("fonts/venus\ rising\ rg.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: "ticketing";
+            src: url("/fonts/ticketing.regular.ttf") format("truetype");
+        }
+
+        body {
+            margin: 0;
+            background-color: #4d4d4d;
+            overflow: hidden;
+        }
+
+        .message-box {
+            width: 400px;
+            margin: 5rem;
+            font-family: monospace;
+            position: relative;
+
+
+        }
+
+        .message-headbox {
+            height: 40px;
+            background-color: #130096;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .message-headtxt {
+            padding: 0px 18px;
+            font-size: 16px;
+            font-weight: 100;
+            margin-top: 38px;
+
+        }
+
+        .translate-icon {
+            filter: invert(1);
+            width: 24px;
+            height: fit-content;
+            margin-left: 33px;
+        }
+
+        #message-textbox {
+            background-color: #000000;
+            color: #fff;
+            padding: 26px 36px;
+            font-size: 16px;
+            line-height: 30px;
+
+        }
+
+        .bottom-right-frame,
+        .bottom-left-frame,
+        .top-right-frame,
+        .top-left-frame {
+            width: 20px;
+            position: absolute;
+
+        }
+
+        .bottom-right-frame {
+            transform: rotate(0deg);
+            bottom: 0;
+            right: 0;
+        }
+
+        .bottom-left-frame {
+            transform: rotate(90deg);
+            bottom: 0;
+            left: 0;
+        }
+
+        .top-right-frame {
+            transform: rotate(270deg);
+            right: 0;
+        }
+
+        .top-left-frame {
+            transform: rotate(180deg);
+        }
+
+       .left-char {
+        width: 320px;
+    position: fixed;
+    bottom: 0;
+    left: 70px;
+       }
+    </style>
+</head>
+
+<body onload="typeWriter()">
+
+    <img class="left-char" src="/motion-comic/left-astronaut.webp" alt="">
+
+
+    <div class="message-box">
+        <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff"></path>
+        </svg>
+        <svg class="top-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff"></path>
+        </svg>
+        <div class="message-headbox"><img class="translate-icon" src="translate.svg" alt="">
+            <h6 class="message-headtxt">Translating <span>...</span></h6>
+        </div>
+        <div id="message-textbox"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
+        <svg class="bottom-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff"></path>
+        </svg>
+        <svg class="bottom-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff"></path>
+        </svg>
+    </div>
+
+
+
+    <script>
+        var txt = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.';
+        var speed = 70;
+
+        function typeWriter() {
+            var i = 0;
+            var interval = setInterval(function () {
+                document.getElementById("message-textbox").innerHTML += txt.charAt(i);
+                i++;
+                if (i > txt.length - 1) {
+                    clearInterval(interval);
+                }
+            }, speed);
+        }
+    </script>
+</body>
+
+</html>
