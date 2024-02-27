@@ -20,7 +20,7 @@
 const modelViewer = document.querySelector("#sscbs-model");
 let lastX;
 let panning = false;
-let skyboxAngle = 180;
+let skyboxAngle = 360;
 let radiansPerPixel;
 
 const startPan = () => {
