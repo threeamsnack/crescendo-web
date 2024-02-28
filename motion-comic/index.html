@@ -76,7 +76,8 @@
 
         }
 
-        #message-textbox-left-1,#message-textbox-left-2,
+        #message-textbox-left-1,
+        #message-textbox-left-2,
         #message-textbox-right {
             background-color: #000000;
             color: #fff;
@@ -191,9 +192,14 @@
 <body>
 
     <!-- assests -->
+    <!-- <img class="loader-bg-img" src="/motion-comic/loader-bg.webp" alt="">
     <h3 class="loading-txt"></h3>
-    <h3 class="loader-btn" style="display: none;">NEXT</h3>
-    <h3 class="loader-btn" style="display: none;">TELEPORT</h3>
+    <h3 class="loader-btn" id="next-btn" >NEXT</h3>
+    <h3 class="loader-btn" id="teleport-btn">TELEPORT</h3>
+    <div class="left-char-con-1"></div>
+    <div class="left-char-con-2"></div>
+    <div class="right-char-con-"></div> -->
+
 
     <div class="loader-bg">
         <img class="loader-bg-img" src="/motion-comic/loader-bg.webp" alt="">
@@ -202,8 +208,8 @@
     <h3 class="loading-txt">Connecting to CBS-Wireless-1 <span class="blick-dots"></span></h3>
 
     <div>
-        <h3 class="loader-btn" style="display: none;">NEXT</h3>
-        <h3 class="loader-btn" style="display: none;">TELEPORT</h3>
+        <h3 class="loader-btn" style="display: none;" onclick="showNext()">NEXT</h3>
+        <h3 class="loader-btn" style="display: none;" onclick="redirectToCrescendo()">TELEPORT</h3>
     </div>
 
     <div class="left-char-con-1" style="display: none;">
@@ -235,7 +241,7 @@
         </div>
     </div>
 
-    <div class="left-char-con-2" style="display: flex;">
+    <div class="left-char-con-2" style="display: none;">
         <img class="left-char" src="/motion-comic/left-astronaut.webp" alt="">
         <div class="message-box-left-1">
             <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">

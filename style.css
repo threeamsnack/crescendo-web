@@ -41,40 +41,34 @@ model-viewer {
   gap: 3rem;
 }
 
-@media (max-height: 540px) {
-  #landing-container {
-    margin-top: 11rem;
-  }
-}
 
 #landing-text-container {
-  width: 538px;
-  margin-left: 8%;
+  width: 63vh;
+  margin-left: 14vh;
 }
 
 #landing-text {
-  color: #fff;
-  font-size: 37px;
-  font-family: venusrising;
-  width: 538px;
-  height: 340px;
-  line-height: 53px;
+  color: rgb(255, 255, 255);
+    font-size: 4vh;
+    font-family: venusrising;
+    width: 60vh;
+    height: 34vh;
+    line-height: 6.5vh;
 }
 
 .navbtn-stack {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  width: 400px;
-  height: 278px;
+  width: 60vh;
+  height: 47vh;
   pointer-events: auto;
   justify-items: center;
-  margin-right: 4%;
-  row-gap: 24px;
+  margin-right: 6vh;
+  row-gap: 1vh;
 }
 
 nav {
-  background-color: #000;
-  height: 104px;
+  height: 13.5vh;
   position: fixed;
   z-index: 1;
   width: -webkit-fill-available;
@@ -88,8 +82,8 @@ nav {
 }
 
 #logo {
-  width: 27rem;
-  margin-top: 15px;
+  width: 51vh;
+  margin-top: 2vh;
 }
 
 .fa-volume-off,
@@ -97,19 +91,19 @@ nav {
 .fa-arrows-alt,
 .fa-compress {
   color: white;
-  width: 2rem;
+  width: 1vh;
   position: fixed;
   z-index: 999;
-  bottom: 40px;
-  left: 8%;
-  font-size: 50px;
+  bottom: 5vh;
+  left: 14vh;
+  font-size: 6.5vh;
   pointer-events: auto;
 }
 
 .fa-arrows-alt {
-  font-size: 33px;
-  bottom: 50px;
-  margin-left: 3.5rem;
+  font-size: 4.5vh;
+  bottom: 6vh;
+  margin-left: 8vh;
 }
 
 .compress-btn {
@@ -122,18 +116,16 @@ nav {
 [class*="btn-glitch-"] {
   display: inline-block;
   font-family: "VT323", monospace;
-  border: 1px solid #fff;
+  border: 0.2vh solid #fff;
   color: #fff;
-  padding: 10px 13px;
-  min-width: 175px;
-  line-height: 1.5em;
-  white-space: no-wrap;
+  padding: 1.5vh 2vh;
+  line-height: 3.5vh;
   text-transform: uppercase;
   cursor: pointer;
-  width: 225px;
-  height: 26px;
+  width: 30vh;
+  height: 3.5vh;
   background-color: #262626;
-  font-size: larger;
+  font-size: 2.9vh;
 }
 [class*="btn-glitch-"] .text,
 [class*="btn-glitch-"] .decoration {
@@ -259,7 +251,7 @@ nav {
   z-index: 1000;
 }
 .slideup.open {
-  top: 104px;
+  top: 13.4vh;
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -307,7 +299,6 @@ nav {
 .contact {
   display: none;
   height: 100vh;
-  background-color:  #262626;
+  background-color: #262626;
   color: #fff;
- 
 }
