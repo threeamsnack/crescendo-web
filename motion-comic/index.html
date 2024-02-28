@@ -148,6 +148,7 @@
             position: relative !important;
             width: 100% !important;
             user-select: none;
+            /* filter: blur(4px); */
         }
 
         .loader-btn {
@@ -186,32 +187,52 @@
             top: 42vh;
             user-select: none;
         }
+
+
+
+
+        .loader-bg-img {
+            display: block;
+            filter: none;
+        }
+
+        .loader-bg-img.loaded {
+            filter: blur(4px);
+        }
+
+        .loading-txt {
+            display: block;
+            background: black;
+            padding: 2vh 2vh;
+            color: #b0b0b0;
+            border: 0.2vh solid #b0b0b0;
+            border-radius: 0.9vh;
+        }
+
+        .loader-btn {
+            display: none;
+        }
+
+        .left-char-con-1,
+        .right-char-con-1,
+        .left-char-con-2 {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- assests -->
-    <!-- <img class="loader-bg-img" src="/motion-comic/loader-bg.webp" alt="">
-    <h3 class="loading-txt"></h3>
-    <h3 class="loader-btn" id="next-btn" >NEXT</h3>
-    <h3 class="loader-btn" id="teleport-btn">TELEPORT</h3>
-    <div class="left-char-con-1"></div>
-    <div class="left-char-con-2"></div>
-    <div class="right-char-con-"></div> -->
-
-
+    <div>
     <div class="loader-bg">
         <img class="loader-bg-img" src="/motion-comic/loader-bg.webp" alt="">
     </div>
-
-    <h3 class="loading-txt">Connecting to CBS-Wireless-1 <span class="blick-dots"></span></h3>
-
+    <h3 class="loading-txt" style="display: block;">Connecting to CBS-Wireless-1 <span class="blink-dots" style="color: #b0b0b0;"></span></h3>
     <div>
-        <h3 class="loader-btn" style="display: none;" onclick="showNext()">NEXT</h3>
-        <h3 class="loader-btn" style="display: none;" onclick="redirectToCrescendo()">TELEPORT</h3>
+        <h3 class="loader-btn" id="next-btn-1" style="display: none;">NEXT</h3>
+        <h3 class="loader-btn" id="next-btn-2" style="display: none;">NEXT</h3>
+        <h3 class="loader-btn" id="teleport-btn" style="display: none;">TELEPORT</h3>
     </div>
-
     <div class="left-char-con-1" style="display: none;">
         <img class="left-char" src="/motion-comic/left-astronaut.webp" alt="">
         <div class="message-box-left-1">
@@ -224,7 +245,7 @@
                 </path>
             </svg>
             <div class="message-headbox"><img class="translate-icon" src="translate.svg" alt="">
-                <h6 class="message-headtxt">Translating <span class="blick-dots">...</span></h6>
+                <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
             </div>
 
             <div id="message-textbox-left-1"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
@@ -240,7 +261,6 @@
             </svg>
         </div>
     </div>
-
     <div class="left-char-con-2" style="display: none;">
         <img class="left-char" src="/motion-comic/left-astronaut.webp" alt="">
         <div class="message-box-left-1">
@@ -253,7 +273,7 @@
                 </path>
             </svg>
             <div class="message-headbox"><img class="translate-icon" src="translate.svg" alt="">
-                <h6 class="message-headtxt">Translating <span class="blick-dots">...</span></h6>
+                <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
             </div>
 
             <div id="message-textbox-left-2"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
@@ -269,7 +289,6 @@
             </svg>
         </div>
     </div>
-
     <div class="right-char-con-1" style="display: none;">
         <img class="right-char" src="/motion-comic/right-astronaut.webp" alt="">
         <div class="message-box-right-1">
@@ -282,7 +301,7 @@
                 </path>
             </svg>
             <div class="message-headbox"><img class="translate-icon" src="translate.svg" alt="">
-                <h6 class="message-headtxt">Translating <span class="blick-dots">...</span></h6>
+                <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
             </div>
             <div id="message-textbox-right"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
             <svg class="bottom-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -295,7 +314,7 @@
             </svg>
         </div>
     </div>
-
+</div>
 
     <script src="comic.js"></script>
 
