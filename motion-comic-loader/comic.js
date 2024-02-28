@@ -63,8 +63,8 @@ function typeWriterright() {
 
 
 window.onload = function () {
-    document.querySelector('.loading-txt').style.display = 'block'; 
-    
+    document.querySelector('.loading-txt').style.display = 'block';
+
     setTimeout(function () {
         document.querySelector('.loader-bg-img').classList.add('loaded');
         document.querySelector('.loading-txt').style.display = 'none';
@@ -91,5 +91,6 @@ document.getElementById('next-btn-2').onclick = function () {
 }
 
 document.getElementById('teleport-btn').onclick = function () {
-    window.location.href = '/crescendo-web/index.html';
+    document.getElementById('loader-container').style.display = 'none';
+    typeWriter();
 }
