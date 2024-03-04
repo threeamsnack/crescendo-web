@@ -93,10 +93,11 @@ document.getElementById('next-btn-2').onclick = function () {
 
 document.getElementById('teleport-btn').onclick = function () {
     document.getElementById('loader-container').style.display = 'none';
-
+    
     let teleportContainer = document.querySelector('.teleport-container');
     teleportContainer.style.display = 'block';
-    
+    document.getElementById('nav-bar').style.zIndex = '1009' ;
+
     setTimeout(function () {
         teleportContainer.style.display = 'none';
         typeWriter();
