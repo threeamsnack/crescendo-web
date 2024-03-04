@@ -64,7 +64,6 @@ function typeWriterright() {
 
 window.onload = function () {
     document.querySelector('.loading-txt').style.display = 'block';
-
     setTimeout(function () {
         document.querySelector('.loader-bg-img').classList.add('loaded');
         document.querySelector('.loading-txt').style.display = 'none';
@@ -90,7 +89,16 @@ document.getElementById('next-btn-2').onclick = function () {
     typeWriterleft2("message-textbox-left-2");
 }
 
+
+
 document.getElementById('teleport-btn').onclick = function () {
     document.getElementById('loader-container').style.display = 'none';
-    typeWriter();
-}
+
+    let teleportContainer = document.querySelector('.teleport-container');
+    teleportContainer.style.display = 'block';
+    
+    setTimeout(function () {
+        teleportContainer.style.display = 'none';
+        typeWriter();
+    }, 13000); 
+};
