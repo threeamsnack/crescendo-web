@@ -7,7 +7,8 @@
   <title>Crescendo'24</title>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/about.css">
 
 </head>
 
@@ -15,7 +16,7 @@
 
   <div id="loader-container">
     <div class="loader-bg">
-      <img class="loader-bg-img" src="/motion-comic-loader/loader-bg.webp" alt="">
+      <img class="loader-bg-img" src="/textures/loader-bg.webp" alt="">
     </div>
     <h3 class="loading-txt" style="display: block;">Connecting to CBS-Wireless-1 <span class="blink-dots"
         style="color: #b0b0b0;"></span></h3>
@@ -25,7 +26,7 @@
       <h3 class="loader-btn" id="teleport-btn" style="display: none;">TELEPORT</h3>
     </div>
     <div class="left-char-con-1" style="display: none;">
-      <img class="left-char" src="/motion-comic-loader/left-astronaut.webp" alt="">
+      <img class="left-char" src="/textures/left-astronaut.webp" alt="">
       <div class="message-box-left-1">
         <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
@@ -35,7 +36,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
           </path>
         </svg>
-        <div class="message-headbox"><img class="translate-icon" src="/motion-comic-loader/translate.svg" alt="">
+        <div class="message-headbox"><img class="translate-icon" src="/textures/translate.svg" alt="">
           <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
         </div>
 
@@ -53,7 +54,7 @@
       </div>
     </div>
     <div class="left-char-con-2" style="display: none;">
-      <img class="left-char" src="/motion-comic-loader/left-astronaut.webp" alt="">
+      <img class="left-char" src="/textures/left-astronaut.webp" alt="">
       <div class="message-box-left-1">
         <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
@@ -63,7 +64,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
           </path>
         </svg>
-        <div class="message-headbox"><img class="translate-icon" src="/motion-comic-loader/translate.svg" alt="">
+        <div class="message-headbox"><img class="translate-icon" src="/textures/translate.svg" alt="">
           <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
         </div>
 
@@ -81,7 +82,7 @@
       </div>
     </div>
     <div class="right-char-con-1" style="display: none;">
-      <img class="right-char" src="/motion-comic-loader/right-astronaut.webp" alt="">
+      <img class="right-char" src="/textures/right-astronaut.webp" alt="">
       <div class="message-box-right-1">
         <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
@@ -91,7 +92,7 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
           </path>
         </svg>
-        <div class="message-headbox"><img class="translate-icon" src="/motion-comic-loader/translate.svg" alt="">
+        <div class="message-headbox"><img class="translate-icon" src="/textures/translate.svg" alt="">
           <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
         </div>
         <div id="message-textbox-right"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
@@ -107,80 +108,352 @@
     </div>
   </div>
 
-  <nav><img id="logo" src="/crescendo-logo-removebg-preview.png" alt=""></nav>
-  <model-viewer id="sscbs-model" src="sscbs-models/sscbs-upd2.glb" interpolation-decay="200" disable-tap disable-zoom
-    disable-pan camera-controls touch-action="pan-y" camera-orbit="150deg 150deg 0m" camera-target="0m 30m 0m"
-    shadow-intensity="0" skybox-image="lol6.png" max-camera-orbit="0deg 80.5deg 0m" auto-rotate auto-rotate-delay="0"
-    max-field-of-view="180deg" skybox-height="570m"> </model-viewer>
 
-  <!-- max-camera-orbit="150deg 80.5deg 0m" -->
-  <!-- camera-target="0m 30m 0m"  -->
-  <!-- environment-image="yellow.png" -->
-
-  <div class="home-frame">
-    <div id="landing-container">
-      <div id="landing-text-container">
-        <h1 id="landing-text"></h1>
-      </div>
-      <div class="navbtn-stack">
-        <a class="btn-glitch-fill" data-content="about">
-          <span class="text">// About</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
-        </a>
-        <a class="btn-glitch-fill" data-content="events">
-          <span class="text">// Events</span><span class="text-decoration">_</span><span
-            class="decoration">&rArr;</span>
-        </a>
-        <a class="btn-glitch-fill" data-content="sponsers">
-          <span class="text">// Sponsors</span><span class="text-decoration">_</span><span
-            class="decoration">&rArr;</span>
-        </a>
-        <a class="btn-glitch-fill" data-content="past">
-          <span class="text">// Past</span><span class="text-decoration">_</span><span class="decoration">&rArr;</span>
-        </a>
-        <a class="btn-glitch-fill" data-content="contact">
-          <span class="text">// Contact</span><span class="text-decoration">_</span><span
-            class="decoration">&rArr;</span>
-        </a>
-      </div>
-    </div>
-    <div>
-      <i class="fa fa-volume-off" id="mute-btn" aria-hidden="true" style="display:none" onclick="toggleMute()"></i>
-      <i class="fa fa-volume-down" id="unmute-btn" aria-hidden="true" onclick="toggleMute()"></i>
-      <i class="fa fa-arrows-alt fullscreen-button" aria-hidden="true" onclick="toggleFullScreen()"></i>
-      <i class="fa fa-compress compress-btn" aria-hidden="true" onclick="toggleFullScreen()"></i>
-    </div>
+  <div class="teleport-container" style="display: none;">
+    <video class="teleport-vid" src="/space-travel.mp4" autoplay muted loop></video>
   </div>
 
-  <div class="slideup">
-    <div class="content">
-      <div class="about">About
-        <button class="closeall">Back</button>
+
+  <div class="main-website">
+
+    <nav id="nav-bar"><img id="logo" src="/textures/crescendo-logo.png" alt=""></nav>
+    <model-viewer id="sscbs-model" src="/model-files/v5.glb" interpolation-decay="200" disable-tap disable-zoom
+      disable-pan camera-controls touch-action="pan-y" camera-orbit="150deg 150deg 0m" camera-target="0m 30m 0m"
+      shadow-intensity="0" skybox-image="/model-files/pink-light.png" max-camera-orbit="0deg 80.5deg 0m" auto-rotate
+      auto-rotate-delay="0" max-field-of-view="180deg" skybox-height="570m">
+    </model-viewer>
+
+
+    <div class="model-background-wrapper">
+      <video class="model-video" src="/media/model.mp4" autoplay muted loop></video>
+    </div>
+    <!-- max-camera-orbit="150deg 80.5deg 0m" -->
+    <!-- camera-target="0m 30m 0m"  -->
+    <!-- environment-image="yellow.png" -->
+    <!-- skybox-image="lol6.png" -->
+
+    <div class="home-frame">
+      <div id="landing-container">
+        <div id="landing-text-container">
+          <h1 id="landing-text"></h1>
+        </div>
+
+        <img class="toggle-nav" src="/textures/toggle-btn.png" alt="">
+
+        <div class="navbtn-stack">
+          <a class="btn-glitch-fill" data-content="about">
+            <span class="text">// About</span><span class="text-decoration">_</span><span
+              class="decoration">&rArr;</span>
+          </a>
+          <a class="btn-glitch-fill" data-content="events">
+            <span class="text">// Events</span><span class="text-decoration">_</span><span
+              class="decoration">&rArr;</span>
+          </a>
+          <a class="btn-glitch-fill" data-content="sponsers">
+            <span class="text">// Sponsors</span><span class="text-decoration">_</span><span
+              class="decoration">&rArr;</span>
+          </a>
+          <a class="btn-glitch-fill" data-content="past">
+            <span class="text">// Past</span><span class="text-decoration">_</span><span
+              class="decoration">&rArr;</span>
+          </a>
+          <a class="btn-glitch-fill" data-content="contact">
+            <span class="text">// Contact</span><span class="text-decoration">_</span><span
+              class="decoration">&rArr;</span>
+          </a>
+        </div>
       </div>
-      <div class="events">Events
-        <button class="closeall">Back</button>
-      </div>
-      <div class="sponsers">Sponsers
-        <button class="closeall">Back</button>
-      </div>
-      <div class="past">Past
-        <button class="closeall"><a href="/motion-comic-loader/index.html">Loader</a></button>
-      </div>
-      <div class="contact">Contact
-        <button class="closeall">Back</button>
+      <div>
+        <i class="fa fa-volume-off" id="mute-btn" aria-hidden="true" style="display:none" onclick="toggleMute()"></i>
+        <i class="fa fa-volume-down" id="unmute-btn" aria-hidden="true" onclick="toggleMute()"></i>
+        <i class="fa fa-arrows-alt fullscreen-button" aria-hidden="true" onclick="toggleFullScreen()"></i>
+        <i class="fa fa-compress compress-btn" aria-hidden="true" onclick="toggleFullScreen()"></i>
       </div>
     </div>
 
+    <div class="slideup">
+      <div class="content">
+        <div class="about">
+          <div class="content-container-scroll">
+            <div class="close-btn-cont" style="z-index: 1;background-color: transparent;">
+              <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
+                  aria-hidden="true"></i>BACK</button>
+            </div>
+            <div class="about-container">
+              <div class="section-wrapper" style="overflow: scroll !important;">
+                <div class="section-overflow-ctrl" style="overflow: scroll !important;">
+                  <section class="section-1">
+                    <img id="stars-bg" style="position: fixed;
+    top: 0;" src="/textures/stars-background.webp" alt="">
+                    <img src="/textures/spaceship.webp" id="spaceship">
+                    <img src="/textures/moon.png" id="planet" alt="">
+                    <img src="/textures/surface.webp" id="surface">
+                  </section>
+                  <div class="sec">
+                    <h2 class="about-head">About</h2>
+                    <div class="about-section" id="about-section-1">
+                      <p class="about-text" id="about-text-1" style="margin-top: 5vh;">Nestled within
+                        the bustling hub of
+                        Delhi University's
+                        cultural landscape, we
+                        bring
+                        to you the
+                        much-awaited annual fest of Shaheed Sukhdev College of Business Studies,
+                        CRESCENDO. Over three
+                        lively days, witness the participation of eager students in this vibrant
+                        celebration, brimming
+                        with
+                        laughter and excitement </p>
+                      <img class="blackhole" id="blackhole2" src="textures/blackhole2.webp" alt="">
+                    </div>
 
-    <audio id="audio" src="/Interstellar.mp3" autoplay loop></audio>
+
+                    <div class="about-section">
+                      <img class="blackhole" id="blackhole1" src="/textures/blackhole1.webp" alt="">
+                      <p class="about-text" id="about-text-2">
+                        Starting with a dazzling Promenade, followed by two evenings of musical
+                        enchantment and
+                        thrilling activities. From street plays to dance performances, enter a
+                        world of melodic reverie.
+                        It's a time to reunite with friends, unwind, and simply bask in the
+                        joyous atmosphere
+                      </p>
+                      <img class="blackhole" id="blackhole3" src="/textures/blackhole1.webp" alt="">
+                    </div>
+
+                    <div class="about-section">
+                      <p class="about-text" id="about-text-1">
+                        Last year we closed
+                        with
+                        a blast, and this year it’s back with a single promise: more fun and
+                        surprises. So, mark your
+                        calendars,
+                        register, and prepare to be swept away by the cosmic theme of "Space"
+                      </p>
+                      <img id="revolving-venus" src="/textures/venus.webp" alt="">
+                    </div>
+                    <div class="stat-wrapper">
+                      <div class="stat-box">
+                        <h1 class="stat-figure" data-target="25000">0</h1>
+                        <p class="stat-title">Footfall</p>
+                      </div>
+                      <div class="stat-box">
+                        <h1 class="stat-figure" data-target="150">0</h1>
+                        <p class="stat-title">Colleges</p>
+                      </div>
+                      <div class="stat-box">
+                        <h1 class="stat-figure" data-target="30"></h1><span></span>
+                        <p class="stat-title">Events</p>
+                      </div>
+                      <div class="stat-box">
+                        <h1 class="stat-figure-1">5M+</h1>
+                        <p class="stat-title-1">Digital Footprint</p>
+                      </div>
+                      <div class="stat-box">
+                        <h1 class="stat-figure-1">1.5M+</h1>
+                        <p class="stat-title-1">Accounts Reached</p>
+                      </div>
+                    </div>
+                    <div class="marquee">
+                      <ul class="marquee-content">
+                        <li class="marquee-item"><img class="marquee-image" src="media/DND_5308 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DND_5362 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC06983 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_4358.webp" alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2820 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2839 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2893 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2932 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2974 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_3467 (1).webp"
+                            alt="fest-img"></li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_3594 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_3805 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_3982 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_4075 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_4083 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_4182 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DND_5308 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DND_5362 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC06983 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2820 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2839 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2893 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2932 (1).webp"
+                            alt="fest-img">
+                        </li>
+                        <li class="marquee-item"><img class="marquee-image" src="media/DSC_2974 (1).webp"
+                            alt="fest-img">
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="gradient-wrapper">
+                      <img id="purple-bg" src="/textures/gradient.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="events">
+          <div class="content-container-scroll">
+            <div class="close-btn-cont">
+              <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
+                  aria-hidden="true"></i>BACK</button>
+            </div>
+            <div class="event-container">
+              <h1 class="update-txt">Event Lineup to be announced soon!</h1>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sponsers">
+          <div class="content-container-scroll">
+            <div class="close-btn-cont">
+              <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
+                  aria-hidden="true"></i>BACK</button>
+            </div>
+            <div class="sponsers-container">
+              <h1 class="update-txt">Sponsers to be announced soon!</h1>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="past">
+          <div class="content-container-scroll">
+            <div class="close-btn-cont">
+              <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
+                  aria-hidden="true"></i>BACK</button>
+            </div>
+            <div class="past-container">
+              <div class="past-video-container">
+                <video class="artist-vid" src="/media/irfan.mp4" autoplay muted loop></video>
+              </div>
+              <h1 class="artist-txt">The Local Train</h1>
+              <h1 class="artist-txt">Mohd Irfan</h1>
+              <div class="past-video-container">
+                <video class="artist-vid" src="/media/ravator.mp4" autoplay muted loop></video>
+              </div>
+              <div class="past-video-container">
+                <video class="artist-vid" src="/media/ravator.mp4" autoplay muted loop></video>
+              </div>
+              <h1 class="artist-txt">Mohd Irfan</h1>
+              <h1 class="artist-txt">Mohd Irfan</h1>
+              <div class="past-video-container">
+                <video class="artist-vid" src="/media/irfan.mp4" autoplay muted loop></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="contact">
+          <div class="content-container-scroll">
+            <div class="contact-container">
+              <div class="close-btn-cont">
+                <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
+                    aria-hidden="true"></i>BACK</button>
+              </div>
+              <div style="height: 75vh;">
+                <h1 class="contact-head">Fest Coordinators</h1>
+                <hr>
+                <table class="contact-text">
+                  <tr>
+                    <td class="contact-data">Om Arora</td>
+                    <td class="contact-data">+91 9717447303</td>
+                  </tr>
+                  <tr>
+                    <td class="contact-data">Abhinav Rathore</td>
+                    <td class="contact-data">+91 7007405958</td>
+                  </tr>
+                </table>
+                <!-- <h1 class="contact-head" style="    margin-top: 17vh;">Website</h1>
+              <hr> -->
+                <!-- <div class="credit-footer">
+                <h3 class="contact-text-2">Website Designed and Developed by Pradhyum</h3>
+                <h3 class="contact-text-2">3d Assests by SocialBuildOut</h3>
+                <h3 class="contact-text-2">Content by Aditya Mehra</h3>
+              </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="clickSound">
+      <source src="/sound-effects/slider-up.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="hoverSound">
+      <source src="/sound-effects/nav-click.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="toggleSound">
+      <source src="/sound-effects/toggle-nav.mp3" type="audio/mpeg">
+    </audio>
+
+   
+    <audio id="audio" src="/media/cornfield-chase.mp3" autoplay loop></audio>
 
 
 
 
-    <script src="motion-comic-loader/comic.js"></script>
-    <script src="script.js"></script>
-    <script src="camera.js"></script>
-    <script src='jquery.min.js'></script>
-    <script src="slider.js"></script>
+    <script src="scripts/comic.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src='scripts/camera.js'></script>
+    <script src="scripts/about.js"></script>
+    <script src="audio.js"></script>
+
 
 </body>
 

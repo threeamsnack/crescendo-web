@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+        }
+
+
+
+        .artist-txt {
+            color: #fff;
+            align-self: center;
+            text-align: center;
+            font-family: venusrising;
+        }
+
+        .past-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            overflow: none;
+        }
+
+        .closeall {
+            position: absolute;
+            color: #fff;
+            background-color: #000;
+            border: 1px solid;
+            width: 18vh;
+            display: flex;
+            justify-content: center;
+            padding: 1.5vh 1vh;
+            font-family: chakrapetch;
+            border-radius: 8vh;
+            gap: 1vh;
+            font-size: 2.5vh;
+            right: 2vh;
+        }
+
+        .past-video-container {
+            width: 50vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .artist-vid {
+            width: 50vw;
+            filter: none;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body style="overflow: scroll;">
+    <div class="back-btn">
+        <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
+                aria-hidden="true"></i>BACK</button>
+    </div>
+    <h1>Past Performers</h1>
+    <div class="past-container">
+        <div class="past-video-container">
+            <video class="artist-vid" src="/past-videos/irfan.mp4" autoplay muted loop></video>
+        </div>
+        <h1 class="artist-txt">The Local Train</h1>
+        <h1 class="artist-txt">Mohd Irfan</h1>
+        <div class="past-video-container">
+            <video class="artist-vid" src="/past-videos/ravator.mp4" autoplay muted loop></video>
+        </div>
+        <div class="past-video-container">
+            <video class="artist-vid" src="/past-videos/ravator.mp4" autoplay muted loop></video>
+        </div>
+        <h1 class="artist-txt">Mohd Irfan</h1>
+        <h1 class="artist-txt">Mohd Irfan</h1>
+        <div class="past-video-container">
+            <video class="artist-vid" src="/past-videos/irfan.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+</body>
+
+</html>

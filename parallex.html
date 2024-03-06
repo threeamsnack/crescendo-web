@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallax Zoom Effect</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  body {
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.zoom-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content {
+  height: 200vh; /* Make the content longer for scrolling */
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="/motion-comic-loader/loader-bg.webp" alt="Zooming Image" class="zoom-image">
+  </div>
+
+  <div class="content">
+    <p>Scroll down to see the parallax effect</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor sapien vel nunc laoreet, sit amet ultricies urna euismod. Duis ullamcorper ipsum quis nisi euismod, ut faucibus nulla volutpat. Fusce id nisi sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam pharetra rutrum sodales. Donec at libero vitae ipsum euismod malesuada. Nullam efficitur vitae velit in fermentum. Nam pulvinar eros ac nunc vehicula, ut egestas eros fringilla.</p>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+  const image = document.querySelector('.zoom-image');
+  const scrollPosition = window.scrollY;
+
+  // Calculate zoom level based on scroll position
+  const zoomLevel = 1 + (scrollPosition / window.innerHeight) * 0.5;
+
+  // Apply transform to image
+  image.style.transform = `scale(${zoomLevel})`;
+});
+
+  </script>
+</body>
+</html>
