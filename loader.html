@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .disclaimer-container {
+            width: 75vw;
+            height: 75vh;
+            background-color: #414141;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 12vh;
+            bottom: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 13vw
+        }
+
+
+        .disclaimer-head {
+            height: 13vh;
+            background-color: #1e2c47;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .disclaimer-head-txt {
+            color: #ad2d2d;
+            font-family: monospace;
+            text-align: center;
+            font-size: 7vh;
+            margin: 0;
+            height: fit-content;
+        }
+
+
+        .disclaimer-body {
+            height: 62vh;
+            background-color: #000;
+            border-top: 1px solid #fff;
+        }
+
+        .disclaimer-body-text {
+            font-family: monospace;
+            margin: 0vh 6vh 0vh 6vh;
+            padding-top: 9vh;
+            font-size: 2.5vh;
+            text-align: center;
+            color: #a6acac;
+            line-height: 6vh;
+        }
+
+
+        @media (max-width:765px) {
+            .disclaimer-container {
+                width: 96vw;
+                height: 109vw;
+                margin-left: 2vw;
+            }
+
+            .disclaimer-head {
+                height: 15vw;
+            }
+
+            .disclaimer-head-txt {
+                font-size: 8vw;
+            }
+
+            .disclaimer-body {
+                height: 94vw;
+            }
+
+            .disclaimer-body-text {
+                line-height: 8vw;
+                font-size: 3.5vw;
+                padding-top: 4vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h3 class="loading-txt" style="display: block;">Connecting to CBS-Wireless-1 <span class="blink-dots"
+                style="color: #b0b0b0;"></span></h3> -->
+
+
+
+
+
+
+    <div id="loader-container">
+        <div class="loader-bg">
+            <img class="loader-bg-img" src="/textures/loader-bg.webp" alt="">
+        </div>
+        <h3 class="loading-txt" style="display: block;">Connecting to CBS-Wireless-1 <span class="blink-dots"
+                style="color: #b0b0b0;"></span></h3>
+        <div class="loader-btn-container" style="display: block;">
+            <h3 class="loader-btn" id="next-btn-1" style="display: block;">NEXT</h3>
+            <h3 class="loader-btn" id="next-btn-2" style="display: none;">NEXT</h3>
+            <h3 class="loader-btn" id="teleport-btn" style="display: none;">TELEPORT</h3>
+        </div>
+
+
+        <div class="disclaimer-container">
+            <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                </path>
+            </svg>
+            <svg class="top-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                </path>
+            </svg>
+            <div class="disclaimer-head">
+                <h1 class="disclaimer-head-txt">DISCLAIMER</h1>
+            </div>
+            <div class="disclaimer-body">
+                <p class="disclaimer-body-text">This website is not your average college fest portal. Buckle up, Space
+                    Cadets and College Explorers, because you're about to embark on a journey unlike any other.
+                    Be prepared to experience a level of excitement and discovery that's truly out-of-this-world, feel
+                    the electrifying spirit of our college fest, and be left speechless by the wonders that await.</p>
+
+            </div>
+            <svg class="bottom-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                </path>
+            </svg>
+            <svg class="bottom-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                </path>
+            </svg>
+        </div>
+
+
+        <div class="left-char-con-1" style="display: none;">
+            <img class="left-char" src="/textures/left-astronaut.webp" alt="">
+            <div class="message-box-left-1">
+                <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <svg class="top-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <div class="message-headbox"><img class="translate-icon" src="/textures/translate.svg" alt="">
+                    <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
+                </div>
+
+                <div id="message-textbox-left-1"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
+
+
+                <svg class="bottom-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <svg class="bottom-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="left-char-con-2" style="display: none;">
+            <img class="left-char" src="/textures/left-astronaut.webp" alt="">
+            <div class="message-box-left-1">
+                <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <svg class="top-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <div class="message-headbox"><img class="translate-icon" src="/textures/translate.svg" alt="">
+                    <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
+                </div>
+
+                <div id="message-textbox-left-2"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
+
+
+                <svg class="bottom-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <svg class="bottom-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+            </div>
+        </div>
+        <div class="right-char-con-1" style="display: none;">
+            <img class="right-char" src="/textures/right-astronaut.webp" alt="">
+            <div class="message-box-right-1">
+                <svg class="top-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <svg class="top-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <div class="message-headbox"><img class="translate-icon" src="/textures/translate.svg" alt="">
+                    <h6 class="message-headtxt">Translating <span class="blink-dots">...</span></h6>
+                </div>
+                <div id="message-textbox-right"><span style="color: #b3271d;">sscbs@console ~ % </span></div>
+                <svg class="bottom-left-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+                <svg class="bottom-right-frame" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10H0V9.047625H9.047625V0H10V10Z" fill="#fff">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script src="/scripts/comic.js"></script> -->
+</body>
+
+</html>

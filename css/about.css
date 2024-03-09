@@ -1,7 +1,16 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #stars-bg {
   z-index: 0;
-  margin-top: -1vh;
-
+  margin-top: -1vh
 }
 
 .section-1 {
@@ -11,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .section-1::before {
@@ -21,8 +30,7 @@
   left: 0;
   width: 100vw;
   height: 100px;
-  background: linear-gradient(to top, #000000, transparent);
-  z-index: 10;
+  z-index: 10
 }
 
 .section-1 img {
@@ -32,7 +40,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: none
 }
 
 .section-1 #planet {
@@ -40,15 +48,15 @@
   color: var(--primary);
   font-size: 10vw;
   text-align: center;
-  line-height: 0.55em;
+  line-height: .55em;
   font-family: "Rancho", cursive;
-  transform: translatey(-50%);
+  transform: translatey(-50%)
 }
 
 .section-1 #planet span {
-  font-size: 0.2em;
+  font-size: .2em;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 400
 }
 
 #spaceship {
@@ -56,17 +64,17 @@
   height: 11vh;
   margin-top: 63vh;
   margin-left: 50vw;
-  transform: rotate(47deg);
+  transform: rotate(47deg)
 }
 
 #planet {
   top: 50%;
   width: 84vh;
   height: fit-content;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
 .sec {
@@ -74,9 +82,9 @@
   width: 100%;
   height: 100%;
   background-color: #000;
-  margin-top: -4vh;
+  margin-top: 0vh;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .sec::after {
@@ -86,31 +94,31 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/textures/noise-light.png");
+  background-image: url(/textures/noise-light.png);
   background-repeat: repeat;
-  background-blend-mode: multiply;
+  background-blend-mode: multiply
 }
 
-@media (max-width: 765px) {
+@media (max-width:765px) {
   #planet {
-    width: 41vh;
+    width: 41vh
   }
 
   #spaceship {
-    margin-left: 7vh;
+    margin-left: 7vh
   }
 }
 
 .section-1 #planet {
-  transform: translatey(10%);
+  transform: translatey(10%)
 }
 
 .section-wrapper {
-  overflow: scroll;
+  overflow: scroll
 }
 
 .section-overflow-ctrl {
-  overflow-x: hidden;
+  overflow-x: hidden
 }
 
 .marquee {
@@ -120,20 +128,20 @@
   position: absolute;
   margin-top: 34vh;
   bottom: 25vh;
-  z-index: 1;
+  z-index: 1
 }
 
 .marquee-content {
   display: flex;
   list-style: none;
   animation: scrolling 20s linear infinite;
-  gap: 2vh;
+  gap: 2vh
 }
 
 .marquee-item {
   width: 43vh;
   height: fit-content;
-  flex-shrink: 0;
+  flex-shrink: 0
 }
 
 .marquee-image {
@@ -141,16 +149,16 @@
   width: 100%;
   white-space: nowrap;
   border-radius: 3vh;
-  filter: brightness(0.8);
+  filter: brightness(.8)
 }
 
 @keyframes scrolling {
   0% {
-    transform: translateX(0);
+    transform: translateX(0)
   }
 
   100% {
-    transform: translatex(-2000px);
+    transform: translatex(-2000px)
   }
 }
 
@@ -162,11 +170,11 @@
   line-height: 6vh;
   align-self: center;
   width: 115vh;
-  min-width: 488px;
+  min-width: 488px
 }
 
 #about-text-1 {
-  margin-left: 18vh;
+  margin-left: 18vh
 }
 
 .about-head {
@@ -174,18 +182,19 @@
   font-family: "venusrising";
   font-size: 5vh;
   color: #fff;
-  padding-top: 9vh;
+  padding-top: 9vh
 }
 
 .about-section {
   display: flex;
-  margin-top: 8vh;
+  margin-top: 8vh
 }
 
 .blackhole {
   width: 30vh;
   height: fit-content;
   margin-left: 10vh;
+  justify-self: center;
 }
 
 #blackhole2 {
@@ -193,6 +202,7 @@
   margin-left: -7vh;
   width: 40vh;
   transform: rotate(14deg);
+  justify-self: center;
 }
 
 #revolving-venus {
@@ -200,19 +210,19 @@
   height: fit-content;
   position: absolute;
   right: -4vh;
-  filter: brightness(0.5);
+  filter: brightness(.5);
   margin-top: -7vh;
   animation: rotate 10s linear infinite;
-  z-index: 1;
+  z-index: 1
 }
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg)
   }
 
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg)
   }
 }
 
@@ -227,7 +237,7 @@
   bottom: 86vh;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 1
 }
 
 .stat-box {
@@ -236,58 +246,58 @@
   height: 17vh;
   font-family: chakrapetch;
   border-radius: 1vh;
-  border: 0.2vh dotted #fff;
+  border: .2vh dotted #fff
 }
 
 .stat-figure,
 .stat-figure-1 {
   text-align: center;
   margin-top: 2.5vh;
-  font-size: 5vh;
+  font-size: 5vh
 }
 
 .stat-title,
 .stat-title-1 {
   text-align: center;
   margin-top: -2vh;
-  font-size: 2.7vh;
+  font-size: 2.7vh
 }
 
 .stat-title-1 {
-  margin-top: -3vh;
+  margin-top: -3vh
 }
 
 #purple-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: none
 }
 
 .about-text-2 {
-  margin-top: 0vh;
+  margin-top: 0vh
 }
 
 .sec::after {
-  background-size: 17vh;
+  background-size: 17vh
 }
 
 .about-section {
   display: grid;
   margin-top: 8vh;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr)
 }
 
 #blackhole3 {
-  display: none;
+  display: none
 }
 
-@media (max-width: 765px) {
+@media (max-width:765px) {
   .about-section {
     display: grid;
     margin-top: 8vh;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: -3vh;
+    margin-top: -3vh
   }
 
   .stat-wrapper {
@@ -295,16 +305,16 @@
     width: 20vh;
     gap: 4vh;
     bottom: 40vh;
-    margin-bottom: -58rem;
+    margin-bottom: -70rem;
     margin-top: 17rem;
-    position: sticky;
+    position: sticky
   }
 
   .stat-title,
   .stat-title-1 {
     text-align: center;
     margin-top: -4vw;
-    font-size: 4.7vw;
+    font-size: 4.7vw
   }
 
   .stat-box {
@@ -313,25 +323,25 @@
     height: 30vw;
     font-family: chakrapetch;
     border-radius: 3vw;
-    border: 0.2vh dotted #fff;
+    border: .2vh dotted #fff
   }
 
   .stat-figure,
   .stat-figure-1 {
     text-align: center;
     margin-top: 4.5vw;
-    font-size: 9vw;
+    font-size: 9vw
   }
 
   .marquee {
     bottom: 3vh;
-    margin-left: -40vh;
+    margin-left: -40vh
   }
 
   #purple-bg {
     width: 214vw;
     height: 309vw;
-    margin-left: -110vw;
+    margin-left: -110vw
   }
 
   #revolving-venus {
@@ -339,9 +349,9 @@
     height: fit-content;
     position: absolute;
     right: -13vh;
-    filter: brightness(0.5);
+    filter: brightness(.5);
     animation: rotate 10s linear infinite;
-    margin-top: 44vh;
+    margin-top: 44vh
   }
 
   .about-head {
@@ -351,45 +361,45 @@
     color: #fff;
     padding-top: 16vh;
     padding-bottom: 9vh;
-    margin-left: 3vh;
+    margin-left: 3vh
   }
 
   #about-text-1 {
     margin-left: 3vh;
     text-align: start;
     margin-top: 13vh;
-    padding-bottom: 17vh;
+    padding-bottom: 17vh
   }
 
   .about-text {
     width: 93%;
-    min-width: 0px;
+    min-width: 0;
     margin-left: auto;
     margin-right: auto;
     text-align: end;
     line-height: 4.5vh;
     font-size: 2.5vh;
     font-family: "chakrapetch";
-    margin: 3vh 1vh;
+    margin: 3vh 1vh
   }
 
   #blackhole2 {
     margin-right: auto;
     margin-left: auto;
-    margin-top: -15vh;
+    margin-top: -15vh
   }
 
   #blackhole1 {
     margin-left: auto;
     margin-right: auto;
-    display: none;
+    display: none
   }
 
   #blackhole3 {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 10vh;
+    margin-top: 10vh
   }
 }
 
@@ -399,5 +409,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden
 }

@@ -1,24 +1,55 @@
+function toggleMute() {
+    const audio = document.getElementById('audio');
+    const muteBtn = document.getElementById('mute-btn');
+    const unmuteBtn = document.getElementById('unmute-btn');
+
+    if (audio.muted) {
+        audio.muted = false;
+        muteBtn.style.display = 'none';
+        unmuteBtn.style.display = 'inline';
+    } else {
+        audio.muted = true;
+        muteBtn.style.display = 'inline';
+        unmuteBtn.style.display = 'none';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('audio');
+    // audio.muted = true;
+    document.getElementById('mute-btn').style.display = 'none';
+    document.getElementById('unmute-btn').style.display = 'inline';
+ 
+});
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    var buttons = document.querySelectorAll(".btn-glitch-fill");
+    var buttons = document.querySelectorAll(".btn-glitch-fill, .nav-btn");
     var clickSound = document.getElementById("clickSound");
     var hoverSound = document.getElementById("hoverSound");
     var toggleNav = document.querySelector('.toggle-nav');
     var toggleSound = document.getElementById('toggleSound');
+    var nextBtn = document.querySelectorAll('.loader-btn');
+    var telBtn = document.getElementById('teleport-btn');
 
 
     buttons.forEach(function (button) {
         var audioPlayed = false;
 
         button.addEventListener("mouseenter", function (event) {
-            // Check if the audio has already been played for this button
             if (!audioPlayed) {
                 playHoverSound();
-                audioPlayed = true; // Set the flag to true to indicate that audio has been played
+                audioPlayed = true;
             }
         });
 
         button.addEventListener("mouseleave", function (event) {
-            audioPlayed = false; // Reset the flag when the mouse leaves the button
+            audioPlayed = false;
         });
 
         button.addEventListener("click", function (event) {
@@ -46,16 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleSound.play();
     });
 
+    nextBtn.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            toggleSound.play();
+        });
+    });
+
+    telBtn.addEventListener('click', function () {
+        playClickSound();
+    });
+
+
 });
-
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var toggleNav = document.querySelector('.toggle-nav');
-//     var toggleSound = document.getElementById('toggleSound');
-
-//     toggleNav.addEventListener('click', function () {
-//         toggleSound.play();
-//     });
-
-// });
