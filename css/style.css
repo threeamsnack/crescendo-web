@@ -304,6 +304,7 @@ body {
   margin-left: auto;
   top: 42vh;
   user-select: none;
+  text-wrap: nowrap;
 }
 
 .loader-btn {
@@ -830,7 +831,7 @@ nav {
     position: fixed;
     color: #fff;
     font-family: monospace;
-    width: 78vw;
+    width: 81vw;
     font-size: 4vw;
     left: 0;
     right: 0;
@@ -1024,7 +1025,7 @@ nav {
   }
 
   #landing-text {
-    opacity: 0;
+    opacity: 1;
   }
 
   .navbtn-stack {
@@ -1250,7 +1251,7 @@ nav {
 
 .sponser-logo {
   width: 14vw;
-  height: fit-content;
+  height: inherit;
   align-self: center;
 }
 

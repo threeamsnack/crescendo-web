@@ -70,7 +70,7 @@
 #planet {
   top: 50%;
   width: 84vh;
-  height: fit-content;
+  height: initial;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -192,7 +192,7 @@
 
 .blackhole {
   width: 30vh;
-  height: fit-content;
+  height: inherit;
   margin-left: 10vh;
   justify-self: center;
 }
@@ -207,7 +207,7 @@
 
 #revolving-venus {
   width: 44vh;
-  height: fit-content;
+  height: inherit;
   position: absolute;
   right: -4vh;
   filter: brightness(0.5);
@@ -426,7 +426,7 @@
 
   #revolving-venus {
     width: 39vh;
-    height: fit-content;
+    height: inherit;
     position: absolute;
     right: -13vh;
     filter: brightness(0.5);

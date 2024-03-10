@@ -19,17 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var opacityCheckInterval;
 
   function enforceOpacity() {
-      loaderBgImg.style.opacity = 0;
-      loadingTxt.style.opacity = 0;
+    loaderBgImg.style.opacity = 0;
+    loadingTxt.style.opacity = 0;
   }
 
   function startOpacityCheck() {
-      enforceOpacity();
-      opacityCheckInterval = setInterval(enforceOpacity, 1000); // Adjust the interval as needed
+    enforceOpacity();
+    opacityCheckInterval = setInterval(enforceOpacity, 1000); // Adjust the interval as needed
   }
 
   teleportBtn.addEventListener("click", function () {
-      startOpacityCheck();
+    startOpacityCheck();
   });
 });
 
@@ -111,17 +111,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const background = document.querySelector('#sscbs-model');
   const mobBackground = document.querySelector('.model-video');
   const mobnavStack = document.querySelector('.navbtn-stack-mob');
+  const mobnavBtn= document.querySelector('.nav-btn');
   const logoSubtext = document.querySelector('#logo-subtext');
 
 
   let isToggled = false;
-
   toggleNav.addEventListener('click', function () {
     if (!isToggled) {
       navStack.style.opacity = '1';
       navStack.style.pointerEvents = 'auto';
       mobnavStack.style.opacity = '1';
+      mobnavStack.style.display = 'grid';
       mobnavStack.style.pointerEvents = 'auto';
+      mobnavBtn.style.pointerEvents = 'auto';
       landingText.style.opacity = '0';
       toggleNav.style.filter = 'sepia(1)';
       background.style.filter = 'blur(2px) grayscale(1)';
@@ -132,7 +134,9 @@ document.addEventListener('DOMContentLoaded', function () {
       navStack.style.opacity = '0';
       navStack.style.pointerEvents = 'none';
       mobnavStack.style.opacity = '0';
+      mobnavStack.style.display = 'none';
       mobnavStack.style.pointerEvents = 'none';
+      mobnavBtn.style.pointerEvents = 'none';
       landingText.style.opacity = '1';
       toggleNav.style.filter = 'invert(1)';
       background.style.filter = 'sepia(0.5)';
@@ -157,25 +161,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-(function() {
+(function () {
   function commentOutModelViewer() {
-      var screenWidth = window.innerWidth;
-      var modelViewer = document.getElementById("sscbs-model");
+    var screenWidth = window.innerWidth;
+    var modelViewer = document.getElementById("sscbs-model");
 
-      if (screenWidth <= 765 && !modelViewer.hasAttribute("data-commented")) {
-          var commentedCode = document.createComment(modelViewer.outerHTML);
-          modelViewer.parentNode.replaceChild(commentedCode, modelViewer);
-          modelViewer.setAttribute("data-commented", "true");
-      } else if (screenWidth > 765 && modelViewer.hasAttribute("data-commented")) {
-          var uncommentedCode = document.createRange().createContextualFragment(modelViewer.outerHTML);
-          modelViewer.parentNode.replaceChild(uncommentedCode, modelViewer.previousSibling);
-          modelViewer.removeAttribute("data-commented");
-      }
+    if (screenWidth <= 765 && !modelViewer.hasAttribute("data-commented")) {
+      var commentedCode = document.createComment(modelViewer.outerHTML);
+      modelViewer.parentNode.replaceChild(commentedCode, modelViewer);
+      modelViewer.setAttribute("data-commented", "true");
+    } else if (screenWidth > 765 && modelViewer.hasAttribute("data-commented")) {
+      var uncommentedCode = document.createRange().createContextualFragment(modelViewer.outerHTML);
+      modelViewer.parentNode.replaceChild(uncommentedCode, modelViewer.previousSibling);
+      modelViewer.removeAttribute("data-commented");
+    }
   }
 
   window.addEventListener("load", commentOutModelViewer);
 
   window.addEventListener("resize", commentOutModelViewer);
 })();
-
-
