@@ -10,7 +10,7 @@
 
 #stars-bg {
   z-index: 0;
-  margin-top: -1vh
+  margin-top: -1vh;
 }
 
 .section-1 {
@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .section-1::before {
@@ -30,7 +30,7 @@
   left: 0;
   width: 100vw;
   height: 100px;
-  z-index: 10
+  z-index: 10;
 }
 
 .section-1 img {
@@ -40,7 +40,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none
+  pointer-events: none;
 }
 
 .section-1 #planet {
@@ -48,15 +48,15 @@
   color: var(--primary);
   font-size: 10vw;
   text-align: center;
-  line-height: .55em;
+  line-height: 0.55em;
   font-family: "Rancho", cursive;
-  transform: translatey(-50%)
+  transform: translatey(-50%);
 }
 
 .section-1 #planet span {
-  font-size: .2em;
+  font-size: 0.2em;
   letter-spacing: 2px;
-  font-weight: 400
+  font-weight: 400;
 }
 
 #spaceship {
@@ -64,7 +64,7 @@
   height: 11vh;
   margin-top: 63vh;
   margin-left: 50vw;
-  transform: rotate(47deg)
+  transform: rotate(47deg);
 }
 
 #planet {
@@ -74,7 +74,7 @@
   left: 0;
   right: 0;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .sec {
@@ -84,7 +84,7 @@
   background-color: #000;
   margin-top: 0vh;
   padding: 0;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .sec::after {
@@ -96,29 +96,29 @@
   height: 100%;
   background-image: url(/textures/noise-light.png);
   background-repeat: repeat;
-  background-blend-mode: multiply
+  background-blend-mode: multiply;
 }
 
-@media (max-width:765px) {
+@media (max-width: 765px) {
   #planet {
-    width: 41vh
+    width: 41vh;
   }
 
   #spaceship {
-    margin-left: 7vh
+    margin-left: 7vh;
   }
 }
 
 .section-1 #planet {
-  transform: translatey(10%)
+  transform: translatey(10%);
 }
 
 .section-wrapper {
-  overflow: scroll
+  overflow: scroll;
 }
 
 .section-overflow-ctrl {
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .marquee {
@@ -128,20 +128,20 @@
   position: absolute;
   margin-top: 34vh;
   bottom: 25vh;
-  z-index: 1
+  z-index: 1;
 }
 
 .marquee-content {
   display: flex;
   list-style: none;
   animation: scrolling 20s linear infinite;
-  gap: 2vh
+  gap: 2vh;
 }
 
 .marquee-item {
   width: 43vh;
   height: fit-content;
-  flex-shrink: 0
+  flex-shrink: 0;
 }
 
 .marquee-image {
@@ -149,16 +149,16 @@
   width: 100%;
   white-space: nowrap;
   border-radius: 3vh;
-  filter: brightness(.8)
+  filter: brightness(0.8);
 }
 
 @keyframes scrolling {
   0% {
-    transform: translateX(0)
+    transform: translateX(0);
   }
 
   100% {
-    transform: translatex(-2000px)
+    transform: translatex(-2000px);
   }
 }
 
@@ -170,11 +170,11 @@
   line-height: 6vh;
   align-self: center;
   width: 115vh;
-  min-width: 488px
+  min-width: 488px;
 }
 
 #about-text-1 {
-  margin-left: 18vh
+  margin-left: 18vh;
 }
 
 .about-head {
@@ -182,12 +182,12 @@
   font-family: "venusrising";
   font-size: 5vh;
   color: #fff;
-  padding-top: 9vh
+  padding-top: 9vh;
 }
 
 .about-section {
   display: flex;
-  margin-top: 8vh
+  margin-top: 8vh;
 }
 
 .blackhole {
@@ -210,94 +210,169 @@
   height: fit-content;
   position: absolute;
   right: -4vh;
-  filter: brightness(.5);
+  filter: brightness(0.5);
   margin-top: -7vh;
   animation: rotate 10s linear infinite;
-  z-index: 1
+  z-index: 1;
 }
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 
 .stat-wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 135vh;
+  width: 65vw;
   margin-left: auto;
   margin-right: auto;
   color: #fff;
   position: absolute;
-  bottom: 86vh;
+  bottom: 41vw;
+  column-gap: 1vw;
   left: 0;
   right: 0;
-  z-index: 1
+  z-index: 1;
 }
 
 .stat-box {
   background-color: #976b1a;
-  width: 20vh;
-  height: 17vh;
+  width: 11vw;
+  height: 9vw;
   font-family: chakrapetch;
   border-radius: 1vh;
-  border: .2vh dotted #fff
+  border: 0.2vh dotted #fff;
 }
 
 .stat-figure,
 .stat-figure-1 {
   text-align: center;
-  margin-top: 2.5vh;
-  font-size: 5vh
+  margin-top: 1.3vw;
+  font-size: 2.5vw;
 }
 
 .stat-title,
 .stat-title-1 {
   text-align: center;
-  margin-top: -2vh;
-  font-size: 2.7vh
+  margin-top: -1vw;
+  font-size: 1.5vw;
 }
 
 .stat-title-1 {
-  margin-top: -3vh
+  margin-top: -2vw;
 }
 
 #purple-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none
+  pointer-events: none;
 }
 
 .about-text-2 {
-  margin-top: 0vh
+  margin-top: 0vh;
 }
 
 .sec::after {
-  background-size: 17vh
+  background-size: 17vh;
 }
 
 .about-section {
   display: grid;
   margin-top: 8vh;
-  grid-template-columns: repeat(2, 1fr)
+  grid-template-columns: repeat(2, 1fr);
 }
 
 #blackhole3 {
-  display: none
+  display: none;
 }
 
-@media (max-width:765px) {
+.about-contact {
+  color: #fff;
+  font-family: monospace;
+  position: absolute;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  justify-self: center;
+  bottom: 16vw;
+  text-align: left;
+}
+
+.about-data {
+  width: 23vh;
+  height: 3vh;
+}
+.about-table {
+  margin: 19px 0px 19px -2px;
+}
+
+.about-particular,
+.about-data,
+.about-contact {
+  font-size: 1vw;
+  margin: 0;
+}
+
+.gradient-wrapper {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: -15vh;
+}
+
+
+
+@media (max-width: 765px) {
+
+  .about-table {
+    margin:5px 0px 3px -2px;
+  }
+  .gradient-wrapper {
+    margin-bottom: 0;
+  }
+  .about-contact {
+    color: #fff;
+    font-family: monospace;
+    position: absolute;
+    width: 17rem;
+    bottom: 3vw;
+    left: 0;
+    right: 0;
+    justify-self: center;
+    text-align: left;
+  }
+
+  .about-particular,
+  .about-data,
+  .about-contact {
+    font-size: 2.6vw;
+    margin: 0;
+  }
+
+  .about-data {
+    width: 26vw;
+    height: 3vw;
+  }
+  .about-table {
+    margin-top: 3px;
+    margin-left: -2px;
+    padding-bottom: 3px;
+  }
   .about-section {
     display: grid;
     margin-top: 8vh;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: -3vh
+    margin-top: -3vh;
   }
 
   .stat-wrapper {
@@ -315,7 +390,11 @@
   .stat-title-1 {
     text-align: center;
     margin-top: -4vw;
-    font-size: 4.7vw
+    font-size: 4.7vw;
+  }
+
+  .stat-title-1 {
+    margin-top: -6vw;
   }
 
   .stat-box {
@@ -324,25 +403,25 @@
     height: 30vw;
     font-family: chakrapetch;
     border-radius: 3vw;
-    border: .2vh dotted #fff
+    border: 0.2vh dotted #fff;
   }
 
   .stat-figure,
   .stat-figure-1 {
     text-align: center;
     margin-top: 4.5vw;
-    font-size: 9vw
+    font-size: 9vw;
   }
 
   .marquee {
     bottom: 3vh;
-    margin-left: -40vh
+    margin-left: -40vh;
   }
 
   #purple-bg {
     width: 214vw;
     height: 309vw;
-    margin-left: -110vw
+    margin-left: -110vw;
   }
 
   #revolving-venus {
@@ -350,9 +429,9 @@
     height: fit-content;
     position: absolute;
     right: -13vh;
-    filter: brightness(.5);
+    filter: brightness(0.5);
     animation: rotate 10s linear infinite;
-    margin-top: 44vh
+    margin-top: 44vh;
   }
 
   .about-head {
@@ -362,14 +441,14 @@
     color: #fff;
     padding-top: 16vh;
     padding-bottom: 9vh;
-    margin-left: 3vh
+    margin-left: 3vh;
   }
 
   #about-text-1 {
     margin-left: 3vh;
     text-align: start;
     margin-top: 13vh;
-    padding-bottom: 17vh
+    padding-bottom: 17vh;
   }
 
   .about-text {
@@ -381,34 +460,26 @@
     line-height: 4.5vh;
     font-size: 2.5vh;
     font-family: "chakrapetch";
-    margin: 3vh 1vh
+    margin: 3vh 1vh;
   }
 
   #blackhole2 {
     margin-right: auto;
     margin-left: auto;
-    margin-top: -15vh
+    margin-top: -15vh;
   }
 
   #blackhole1 {
     margin-left: auto;
     margin-right: auto;
-    display: none
+    display: none;
   }
 
   #blackhole3 {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 10vh
+    margin-top: 10vh;
   }
 }
 
-.gradient-wrapper {
-  position: relative;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden
-}
