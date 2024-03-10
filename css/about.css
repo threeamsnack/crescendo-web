@@ -295,7 +295,8 @@
 
 .about-contact {
   color: #fff;
-  font-family: monospace;
+  font-family: poppins;
+    font-weight: 200;
   position: absolute;
   width: fit-content;
   left: 0;
@@ -342,7 +343,8 @@
   }
   .about-contact {
     color: #fff;
-    font-family: monospace;
+    font-family: poppins;
+    font-weight: 200;
     position: absolute;
     width: 17rem;
     bottom: 3vw;
