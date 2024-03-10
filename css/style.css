@@ -15,7 +15,6 @@
   src: url(/fonts/Voger\ Regular.woff2) format("woff2");
 }
 
-
 * {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -401,11 +400,10 @@ nav {
 
 #logo-subtext {
   color: #fff;
-  font-family: 'venusrising';
-  position: fixed;
+  font-family: "venusrising";
   font-size: 1.7vh;
   margin-top: -4vh;
-  margin-left: 58vh;
+  margin-left: -28vh;
   word-spacing: 1vh;
 }
 
@@ -762,8 +760,6 @@ nav {
   display: grid;
 }
 
-
-
 .navbtn-stack {
   opacity: 0;
   pointer-events: none;
@@ -798,12 +794,12 @@ nav {
   position: fixed;
   bottom: 0;
   width: 100vw;
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 3vh;
   margin-bottom: -9vh;
   word-spacing: 0vh;
-  letter-spacing: .1vh;
-  opacity: .9;
+  letter-spacing: 0.1vh;
+  opacity: 0.9;
   height: 19vh;
   text-align: center;
 }
@@ -1070,11 +1066,10 @@ nav {
 
   #logo-subtext {
     color: #fff;
-    font-family: 'venusrising';
-    position: fixed;
+    font-family: "venusrising";
     font-size: 1.7vw;
     margin-top: -5vw;
-    margin-left: 12.5vw;
+    margin-left: -34.5vw;
     word-spacing: 1vw;
   }
 
@@ -1145,7 +1140,7 @@ nav {
     filter: invert(1);
     z-index: 1005;
     pointer-events: auto;
-    opacity: .6;
+    opacity: 0.6;
   }
 
   .fa-compress {

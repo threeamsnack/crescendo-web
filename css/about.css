@@ -304,10 +304,11 @@
     grid-template-columns: repeat(1, 1fr);
     width: 20vh;
     gap: 4vh;
-    bottom: 40vh;
+    bottom: 24vh;
     margin-bottom: -70rem;
-    margin-top: 17rem;
-    position: sticky
+    margin-top: 31rem;
+    position: sticky;
+    justify-items: center;
   }
 
   .stat-title,
