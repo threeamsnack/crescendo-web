@@ -186,13 +186,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const pastPlayBtn = document.getElementById('past-play');
   const videos = document.querySelectorAll('.artist-vid');
 
-  pastPlayBtn.addEventListener('click', function() {
+  function playVideos() {
       videos.forEach(video => {
           video.muted = true;
           video.play();
       });
-  });
+      window.removeEventListener('scroll', playVideos);
+      window.removeEventListener('click', playVideos);
+  }
+
+  window.addEventListener('scroll', playVideos);
+  window.addEventListener('click', playVideos);
 });
