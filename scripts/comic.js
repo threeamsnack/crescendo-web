@@ -15,7 +15,7 @@ function animateBlinkDots() {
 
 function typeWriterdisclaimer() {
     var txt = "Welcome to the virtual cosmos of Crescendo, the annual fest of SSCBS! As you embark on this journey, remember, the cosmos is vast and unpredictable. While we strive for an out-of-this-world experience, unforeseen asteroid showers or temporal anomalies may occur. Navigate with curiosity as your guide, but know you do so at your own risk. Safe travels, and may the force be with you!";
-    var speed = 20;
+    var speed = 10;
     var i = 0;
     var interval = setInterval(function () {
         document.getElementById("disclaimer-body-txt").innerHTML += txt.charAt(i);
