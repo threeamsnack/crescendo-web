@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 
     <style>
         body {
             background-color: #000;
         }
 
-        .past-sponser-container {
+        .sponser-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             justify-items: center;
@@ -25,20 +26,31 @@
             align-self: center;
         }
 
+        .sponsers-head {
+            color: #fff;
+            font-family: 'venusrising';
+            text-align: center;
+            margin: 9vh;
+        }
+
+        #t-series {
+            width: 9vw;
+        }
+
         @media (max-width:1060px) {
-            .past-sponser-container {
+            .sponser-container {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
         @media (max-width:900px) {
-            .past-sponser-container {
+            .sponser-container {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width:765px) {
-            .past-sponser-container {
+            .sponser-container {
                 grid-template-columns: repeat(3, 1fr);
                 margin-left: 2vw;
                 margin-right: 2vw;
@@ -48,39 +60,59 @@
             .sponser-logo {
                 width: 19vw;
             }
+
+            .sponsers-head {
+                margin: 9vw;
+                font-size: 4vw;
+            }
+
+            #t-series {
+                width: 12vw;
+            }
+
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Past Sponsers</h1>
+        <div class="sponsers-container">
+            <h1 class="sponsers-head">Sponsors</h1>
+            <div class="sponser-container">
+                <img class="sponser-logo" src="/sponsers/bml-munjal.png" alt="">
+                <img class="sponser-logo" src="/sponsers/career-launcher.jpeg" alt="">
+                <img class="sponser-logo" id="t-series" src="/sponsers/sponsers.png" alt="">
+                <img class="sponser-logo" src="/sponsers/top-one-percent.jpeg" alt="">
+                <img class="sponser-logo" src="/sponsers/unstop.jpeg" alt="">
+            </div>
 
+            <h1 class="sponsers-head">Past Sponsors</h1>
+            <div class="sponser-container">
+                <img class="sponser-logo" src="/past-sponsers/bereal.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/bob.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/idbi-bank.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/indus-bank.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/aakashvani.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/pepsi.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/pizza-hut.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/sbi-logo.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/sony-music.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/vh1.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/vodaphone.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/cokacola.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/hero.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/Hindustan_Petroleum-Logo.wine.png" alt=""
+                    style="width: 23vw;">
+                <img class="sponser-logo" src="/past-sponsers/ht-city.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/IOC.NS-081204c8.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/ht-city.jpeg" alt="">
+                <img class="sponser-logo" src="/past-sponsers/lays.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/linkedin.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/ongc.png" alt="">
+                <img class="sponser-logo" src="/past-sponsers/pass-pass.jpeg" alt="" style="    margin-top: 5vw;">
+            </div>
+        </div>
 
-    <div class="past-sponser-container">
-        <img class="sponser-logo" src="/past-sponsers/bereal.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/bob.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/idbi-bank.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/indus-bank.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/aakashvani.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/pepsi.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/pizza-hut.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/sbi-logo.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/sony-music.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/vh1.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/vodaphone.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/cokacola.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/hero.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/Hindustan_Petroleum-Logo.wine.png" alt="" style="width: 23vw;">
-        <img class="sponser-logo" src="/past-sponsers/ht-city.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/IOC.NS-081204c8.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/ht-city.jpeg" alt="">
-        <img class="sponser-logo" src="/past-sponsers/lays.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/linkedin.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/ongc.png" alt="">
-        <img class="sponser-logo" src="/past-sponsers/pass-pass.jpeg" alt="" style="    margin-top: 5vw;">
-    </div>
-
-</body>
+    </body>
 
 </html>

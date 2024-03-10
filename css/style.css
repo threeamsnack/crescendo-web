@@ -1236,3 +1236,66 @@ nav {
     font-size: 4.2vw;
   }
 }
+
+
+
+
+.sponser-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+.sponser-logo {
+  width: 14vw;
+  height: fit-content;
+  align-self: center;
+}
+
+.sponsers-head {
+  color: #fff;
+  font-family: 'venusrising';
+  text-align: center;
+  margin: 9vh;
+}
+
+#t-series {
+  width: 9vw;
+}
+
+@media (max-width:1060px) {
+  .sponser-container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width:900px) {
+  .sponser-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:765px) {
+  .sponser-container {
+      grid-template-columns: repeat(3, 1fr);
+      margin-left: 2vw;
+      margin-right: 2vw;
+      row-gap: 13vw;
+  }
+
+  .sponser-logo {
+      width: 19vw;
+  }
+
+  .sponsers-head {
+      margin: 9vw;
+      font-size: 4vw;
+  }
+
+  #t-series {
+      width: 12vw;
+  }
+
+}

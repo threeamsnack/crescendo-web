@@ -29,7 +29,7 @@ function typeWriterdisclaimer() {
 
 
 function typeWriterright() {
-    var txt = "Absolutely! The word on the space lanes is that Crescendo is like nothing we've ever seen before. But how does this Teleport thing work? Are we really going to teleport across the galaxy?";
+    var txt = "The word on the space lanes is that Crescendo is like nothing we've ever seen before. But how does this Teleport thing work? Are we really going to teleport across the galaxy?";
     var speed = 20;
     var i = 0;
     var interval = setInterval(function () {
@@ -123,7 +123,7 @@ document.getElementById('teleport-btn').onclick = function () {
     }, 6500);
 
     document.getElementById('loader-container').style.display = 'none';
-    document.getElementsByClassName('loader-bg-img').style.opacity = '0';
-    document.getElementsByClassName('loading-txt').style.opacity = '0';
+    document.getElementByClassName('loader-bg-img').style.opacity = '0';
+    document.getElementByClassName('loading-txt').style.opacity = '0';
 
 };
