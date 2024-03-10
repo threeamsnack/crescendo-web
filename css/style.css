@@ -114,9 +114,10 @@ body {
   }
 
   .disclaimer-body-text {
-    line-height: 6.5vw;
+    line-height: 7vw;
     font-size: 3.5vw;
     padding-top: 4vw;
+    margin: 0vh 4vw 0vw 4vw;
   }
 }
 
@@ -954,7 +955,7 @@ nav {
     right: 0;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
   }
 
   .fa-volume-off,
