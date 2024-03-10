@@ -111,9 +111,10 @@ document.getElementById('teleport-btn').onclick = function () {
     document.getElementById('nav-bar').style.zIndex = '1009';
     document.getElementById('loader-audio').muted = true;
     
-   
+    document.getElementsByClassName('teleport-vid')[0].muted = true; 
+    document.getElementsByClassName('teleport-vid')[0].play();
     audio.play();
-
+   
     setTimeout(function () {
         teleportContainer.classList.add('fade-out');
         setTimeout(function () {
@@ -131,12 +132,12 @@ document.getElementById('teleport-btn').onclick = function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const teleportBtn = document.getElementById('teleport-btn');
-    const video = document.getElementByClassName('teleport-vid');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const teleportBtn = document.getElementById('teleport-btn');
+//     const video = document.getElementByClassName('teleport-vid');
 
-    teleportBtn.addEventListener('click', function() {
-        video.muted = true;
-        video.play();
-    });
-});
+//     teleportBtn.addEventListener('click', function() {
+//         video.muted = true;
+//         video.play();
+//     });
+// });
