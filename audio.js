@@ -17,9 +17,17 @@ function toggleMute() {
 document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('audio');
     const loaderAudio = document.getElementById('loader-audio');
-    loaderAudio.play();
+
     document.getElementById('mute-btn').style.display = 'none';
     document.getElementById('unmute-btn').style.display = 'inline';
+
+    function playAudio() {
+        loaderAudio.play();
+
+    }
+    window.addEventListener('load', playAudio);
+    document.addEventListener('click', playAudio);
+
 });
 
 
