@@ -41,46 +41,6 @@ function typeWriterright() {
     }, speed);
 }
 
-
-
-
-
-// window.onload = function () {
-//     document.querySelector('.loading-txt').style.display = 'block';
-//     setTimeout(function () {
-//         document.querySelector('.loader-bg-img').classList.add('loaded');
-//         document.querySelector('.loading-txt').style.display = 'none';
-//         document.querySelector('.disclaimer-container').style.display = 'none';
-//         document.querySelector('.loader-btn-container').style.display = 'block';
-//         document.querySelector('#next-btn-1').style.display = 'block';
-//         document.querySelector('.left-char-con-1').style.display = 'flex';
-//         typeWriterleft1("message-textbox-left-1");
-//     }, 1000);
-// }
-
-// animateBlinkDots("blink-dots");
-// document.getElementById('next-btn-1').onclick = function () {
-//     document.querySelector('#next-btn-1').style.display = 'none';
-//     document.querySelector('#next-btn-2').style.display = 'block';
-//     document.querySelector('.left-char-con-1').style.display = 'none';
-//     document.querySelector('.right-char-con-1').style.display = 'flex';
-//     typeWriterright("message-textbox-right");
-// }
-
-// document.getElementById('next-btn-2').onclick = function () {
-//     document.querySelector('#next-btn-2').style.display = 'none';
-//     document.querySelector('#teleport-btn').style.display = 'block';
-//     document.querySelector('.left-char-con-2').style.display = 'flex';
-//     document.querySelector('.right-char-con-1').style.display = 'none';
-//     typeWriterleft2("message-textbox-left-2");
-// }
-
-
-
-
-
-
-
 window.onload = function () {
     document.querySelector('.loading-txt').style.display = 'block';
     setTimeout(function () {
@@ -128,16 +88,3 @@ document.getElementById('teleport-btn').onclick = function () {
     document.getElementByClassName('loading-txt').style.opacity = '0';
 
 };
-
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const teleportBtn = document.getElementById('teleport-btn');
-//     const video = document.getElementByClassName('teleport-vid');
-
-//     teleportBtn.addEventListener('click', function() {
-//         video.muted = true;
-//         video.play();
-//     });
-// });

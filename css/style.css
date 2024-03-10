@@ -276,6 +276,7 @@ body {
   width: 100vw;
   position: fixed;
   z-index: 1005;
+  background-color: #000;
 }
 
 .teleport-vid {
@@ -1237,9 +1238,6 @@ nav {
   }
 }
 
-
-
-
 .sponser-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1256,7 +1254,7 @@ nav {
 
 .sponsers-head {
   color: #fff;
-  font-family: 'venusrising';
+  font-family: "venusrising";
   text-align: center;
   margin: 9vh;
 }
@@ -1265,37 +1263,36 @@ nav {
   width: 9vw;
 }
 
-@media (max-width:1060px) {
+@media (max-width: 1060px) {
   .sponser-container {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .sponser-container {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width:765px) {
+@media (max-width: 765px) {
   .sponser-container {
-      grid-template-columns: repeat(3, 1fr);
-      margin-left: 2vw;
-      margin-right: 2vw;
-      row-gap: 13vw;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 2vw;
+    margin-right: 2vw;
+    row-gap: 13vw;
   }
 
   .sponser-logo {
-      width: 19vw;
+    width: 19vw;
   }
 
   .sponsers-head {
-      margin: 9vw;
-      font-size: 4vw;
+    margin: 9vw;
+    font-size: 4vw;
   }
 
   #t-series {
-      width: 12vw;
+    width: 12vw;
   }
-
 }
