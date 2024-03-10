@@ -121,7 +121,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navStack.style.opacity = '1';
       navStack.style.pointerEvents = 'auto';
       mobnavStack.style.opacity = '1';
-      mobnavStack.style.display = 'grid';
       mobnavStack.style.pointerEvents = 'auto';
       mobnavBtn.style.pointerEvents = 'auto';
       landingText.style.opacity = '0';
@@ -134,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
       navStack.style.opacity = '0';
       navStack.style.pointerEvents = 'none';
       mobnavStack.style.opacity = '0';
-      mobnavStack.style.display = 'none';
       mobnavStack.style.pointerEvents = 'none';
       mobnavBtn.style.pointerEvents = 'none';
       landingText.style.opacity = '1';
@@ -181,3 +179,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener("resize", commentOutModelViewer);
 })();
+
+
+

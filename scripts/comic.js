@@ -127,3 +127,15 @@ document.getElementById('teleport-btn').onclick = function () {
     document.getElementByClassName('loading-txt').style.opacity = '0';
 
 };
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const teleportBtn = document.getElementById('teleport-btn');
+    const video = document.getElementByClassName('teleport-vid');
+
+    teleportBtn.addEventListener('click', function() {
+        video.play();
+    });
+});

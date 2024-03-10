@@ -1203,7 +1203,6 @@ nav {
     border: 1px solid #646363;
     border-radius: 0vw;
     z-index: 1005;
-    pointer-events: auto;
     text-align: left;
     border-radius: 5px;
   }
