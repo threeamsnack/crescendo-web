@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const background = document.querySelector('#sscbs-model');
   const mobBackground = document.querySelector('.model-video');
   const mobnavStack = document.querySelector('.navbtn-stack-mob');
-  const mobnavBtn= document.querySelector('.nav-btn');
+  const mobnavBtn = document.querySelector('.nav-btn');
   const logoSubtext = document.querySelector('#logo-subtext');
 
 
@@ -185,16 +185,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  const videos = document.querySelectorAll('.artist-vid');
+document.addEventListener('DOMContentLoaded', function () {
+  const videos = document.querySelectorAll('.artist-vid, .model-video');
+
 
   function playVideos() {
-      videos.forEach(video => {
-          video.muted = true;
-          video.play();
-      });
-      window.removeEventListener('scroll', playVideos);
-      window.removeEventListener('click', playVideos);
+    videos.forEach(video => {
+      video.muted = true;
+      video.play();
+    });
+    window.removeEventListener('scroll', playVideos);
+    window.removeEventListener('click', playVideos);
   }
 
   window.addEventListener('scroll', playVideos);
