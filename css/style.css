@@ -31,6 +31,10 @@ body {
   overflow: hidden;
 }
 
+video {
+  pointer-events: none;
+}
+
 .toggle-nav {
   position: fixed;
   width: 10vh;
