@@ -101,7 +101,7 @@ video, img {
 @media (max-width: 765px) {
   .disclaimer-container {
     width: 90vw;
-    height: 109vw;
+    height: 116vw;
     margin-left: 5vw;
   }
 
@@ -114,7 +114,7 @@ video, img {
   }
 
   .disclaimer-body {
-    height: 94vw;
+    height: 101vw;
   }
 
   .disclaimer-body-text {
