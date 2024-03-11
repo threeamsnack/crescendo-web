@@ -817,6 +817,10 @@ nav {
   text-decoration: underline;
 }
 
+.popup-container {
+  display: none;
+}
+
 @media (max-width: 765px) {
   #loader-container {
     width: 190px;
@@ -1235,6 +1239,62 @@ nav {
 
   .credit-footer {
     font-size: 4.2vw;
+  }
+
+  .popup-container {
+    display: block;
+    width: 16rem;
+    height: 17.46rem;
+    background-color: #5c5c70;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90%;
+    border-radius: 8px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1005;
+    transform: translate(0%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .popup-head {
+    color: #fff;
+    font-family: poppins;
+    padding: 0rem 19px 0.5rem 19px;
+    font-weight: 200;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .popup-vid {
+    width: 201px;
+    border-radius: 8px;
+  }
+
+  .fa-times {
+    font-size: 26px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 13rem;
+  }
+
+  .main-website {
+    filter: none;
+    pointer-events: auto;
+  }
+
+  .popup-container.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .main-website.open {
+    filter: brightness(0.5);
+    pointer-events: none;
   }
 }
 

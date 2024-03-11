@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  const videos = document.querySelectorAll('.artist-vid, .model-video');
+  const videos = document.querySelectorAll('.artist-vid, .model-video, .popup-vid');
 
 
   function playVideos() {
@@ -200,4 +200,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', playVideos);
   window.addEventListener('click', playVideos);
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const popupContainer = document.querySelector('.popup-container');
+  const mainWebsite = document.querySelector('.main-website');
+  const teleportBtn = document.getElementById('teleport-btn');
+  const closeBtn = document.querySelector('.fa.fa-times');
+
+  teleportBtn.addEventListener('click', function() {
+      setTimeout(function() {
+          popupContainer.classList.add('open');
+          mainWebsite.classList.add('open');
+      }, 15000);
+  });
+
+  closeBtn.addEventListener('click', function() {
+      popupContainer.classList.remove('open');
+      mainWebsite.classList.remove('open');
+  });
 });
