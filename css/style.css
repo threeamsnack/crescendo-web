@@ -31,7 +31,8 @@ body {
   overflow: hidden;
 }
 
-video, img {
+video,
+img {
   pointer-events: none;
 }
 

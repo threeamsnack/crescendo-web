@@ -382,7 +382,7 @@
     width: 20vh;
     gap: 4vh;
     bottom: 24vh;
-    margin-bottom: -70rem;
+    margin-bottom: -58rem;
     margin-top: 31rem;
     position: sticky;
     justify-items: center;
@@ -485,3 +485,21 @@
   }
 }
 
+
+
+
+.about-socials-container {
+  font-size: 26px;
+  text-align-last: left;
+  padding-top: 2vh;
+  display: revert-layer;
+  position: relative;
+  z-index: 1005;
+  color: #cbb4fc;
+}
+
+.about-social {
+  text-decoration: none;
+  color: #cbb4fc;
+  margin-right: 6px;
+}
