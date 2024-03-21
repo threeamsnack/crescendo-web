@@ -15,9 +15,8 @@
   <style>
     body {
       color: #fff;
-      background: linear-gradient(265deg, rgba(255, 255, 255, 1) 0%, rgb(42 38 47) 0%, rgb(37 31 60) 92%);
       background-attachment: fixed;
-      background-color: #2b242f;
+      background-color: #000;
     }
 
 
@@ -48,7 +47,7 @@
       width: 33vw;
       min-width: 19rem;
       height: 3rem;
-      background-color: #635c70;
+      background-color: #3d3d3e;
       border-style: none;
       border-radius: 4rem;
       color: #b9b4c0;
@@ -105,14 +104,69 @@
     }
 
     .parent-container {
-      margin-bottom: 10rem;
+      padding-bottom: 0rem;
     }
 
     .input-cont {
-      margin-top: 3rem;
+      margin-top: 5rem;
       text-align: center;
     }
 
+    .retro-cd {
+      position: absolute;
+      width: 24vw;
+      right: 0;
+      margin-right: -5vw;
+      animation: rotate 10s linear infinite;
+      z-index: 1;
+    }
+
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    .pink-gradient {
+      position: relative;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .copyright {
+      font-family: poppins;
+      font-size: 1vw;
+      opacity: .5;
+      text-align: center;
+      font-weight: 200;
+      margin-top: -9vw;
+      padding-bottom: 2.5vw;
+      margin-bottom: 0px;
+    }
+
+    .parent-wrapper-1 {
+      overflow: scroll;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #prom-icon {
+      width: 36vw;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 3vw;
+      filter: grayscale(1);
+    }
 
     @media (max-width:765px) {
       #cres-logo {
@@ -140,7 +194,7 @@
         width: 43vw;
         min-width: unset;
         height: 2rem;
-        background-color: #635c70;
+        background-color: #3d3d3e;
         border-style: none;
         border-radius: 4rem;
         color: #b9b4c0;
@@ -171,69 +225,142 @@
         font-size: medium;
       }
 
+      .retro-cd {
+        position: absolute;
+        width: 65vw;
+        right: 0;
+        margin-right: -19vw;
+        animation: rotate 10s linear infinite;
+        z-index: 1;
+      }
+
+      .pink-gradient {
+        position: relative;
+        width: 126vw;
+        height: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .copyright {
+        margin-top: -25vw;
+        padding-bottom: 6.5vw;
+        margin-bottom: 0px;
+        font-family: poppins;
+        font-size: 3vw;
+        opacity: .5;
+        text-align: center;
+        font-weight: 200;
+      }
+
+      .input-cont {
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        text-align: center;
+      }
+
+      #submit-btn {
+        width: 94vw;
+        height: 10vw;
+      }
+
+      #prom-icon {
+        width: 56vw;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 14vw;
+        filter: grayscale(1);
+      }
+
+    }
+
+    .parent-wrapper {
+      background-image: url(/textures/noise-light.png);
+      background-repeat: repeat;
+      background-blend-mode: multiply;
+      background-size: 5rem;
+      display: block;
+      overflow: hidden;
+      width: 100vw;
+      position: relative;
     }
   </style>
 </head>
 
 <body style="overflow: scroll;">
+  <div class="parent-wrapper-1">
+    <div class="parent-wrapper">
 
-  <img id="cres-logo" src="/textures/crescendo-logo.png" alt="">
+      <a href="index.html">
+        <img id="cres-logo" src="/textures/crescendo-logo.png" href="index.html" alt="">
+      </a>
+
+      <div class="parent-container">
+        <img id="prom-icon" src="/textures/prom-night-t.png" alt="">
+        <h1>Love is in the air, and so in Crescendo. Register Now&nbsp;.&nbsp;.&nbsp;.&nbsp;If you can find one!</h1>
+
+        <form id="promForm" method="POST" name="promresponses" enctype="multipart/form-data">
 
 
-  <div class="parent-container">
-    <h1>Love is in the air, and so in Crescendo. Register Now&nbsp;.&nbsp;.&nbsp;.&nbsp;If you can find one!</h1>
+          <div class="detail-container">
+            <div class="form-section">
+              <h3>Him</h3>
+              <input class="input-container" type="text" name="malepartnername" placeholder="Enter Name" required
+                maxlength="30"><br><br>
+              <input class="input-container" type="text" name="malepartnercontact" placeholder="Enter Contact No."
+                pattern="[0-9]{10}" title="Please enter 10-digit number" minlength="10" maxlength="10" required>
+              <br><br>
+              <input class="input-container" type="email" name="malepartneremail" placeholder="Enter Email" required
+                maxlength="30"><br><br>
 
-    <form id="promForm" method="POST" name="promresponses" enctype="multipart/form-data"  >
+              <div style="text-align: center;">
+                <h3>Couple Image</h3>
+                <input class="input-container" type="text" name="coupleimg" placeholder="Enter Drive Link"
+                  maxlength="100" required>
+              </div>
+            </div>
 
 
-      <div class="detail-container">
-        <div class="form-section">
-          <h3>Him</h3>
-          <input class="input-container" type="text" name="malepartnername"
-            placeholder="Enter Name" required maxlength="30"><br><br>
-          <input class="input-container" type="text" name="malepartnercontact"
-            placeholder="Enter Contact No." pattern="[0-9]{10}" title="Please enter 10-digit number" minlength="10"
-            maxlength="10" required>
-          <br><br>
-          <input class="input-container" type="email" name="malepartneremail"
-            placeholder="Enter Email" required maxlength="30"><br><br>
+            <div class="form-section">
+              <h3>Her</h3>
+              <input class="input-container" type="text" name="femalepartnername" placeholder="Enter Name" required
+                maxlength="30"><br><br>
+              <input class="input-container" type="text" name="femalepartnercontact" placeholder="Enter Contact No."
+                pattern="[0-9]{10}" title="Please enter 10-digit number" minlength="10" maxlength="10" required>
+              <br><br>
+              <input class="input-container" type="email" name="femalepartneremail" placeholder="Enter Email" required
+                maxlength="30"><br><br>
 
-          <div style="text-align: center;">
-            <h3>Pair Image</h3>
-            <input class="input-container" type="text" name="coupleimg"
-            placeholder="Enter Drive Link" maxlength="100" required>
+              <h3>Hashtag</h3>
+              <input class="input-container" type="text" name="couplehashtag" placeholder="Enter Couple #Hashtag"
+                maxlength="30" required>
+
+            </div>
           </div>
+
+
+          <div class="input-cont">
+            <input id="submit-btn" class="input-container" type="submit" value="SUBMIT"
+              style="background-color: #593246;color: white;">
+          </div>
+        </form>
+        <div>
+          <img class="retro-cd" src="/textures/retro_cd.png" alt="">
         </div>
-
-
-        <div class="form-section">
-          <h3>Her</h3>
-          <input class="input-container" type="text" name="femalepartnername"
-            placeholder="Enter Name" required maxlength="30"><br><br>
-          <input class="input-container" type="text" name="femalepartnercontact"
-            placeholder="Enter Contact No." pattern="[0-9]{10}" title="Please enter 10-digit number" minlength="10"
-            maxlength="10" required>
-          <br><br>
-          <input class="input-container" type="email" name="femalepartneremail"
-            placeholder="Enter Email" required maxlength="30"><br><br>
-
-          <h3>Hashtag</h3>
-          <input class="input-container" type="text" name="couplehashtag"
-            placeholder="Enter Couple #Hashtag" maxlength="30" required>
-
-        </div>
+        <img class="pink-gradient" src="/textures/pink-gradient-cropped.png" alt="">
       </div>
+      <p class="copyright">For enquries, Contact,<br>
+        Om Arora : 9717447303 <br>
+        Abhinav Rathore : 7007405958 <br>
+        Copyright © 2024 Crescendo SSCBS. All Rights Reserved</p>
 
 
-      <div class="input-cont">
-        <input id="submit-btn" class="input-container" type="submit" value="Submit" style="background-color: #7e7194;color: white;">
-      </div>
-    </form>
+
+    </div>
   </div>
-
-
-
-
   <script>
     document.getElementById('fileInput').addEventListener('change', function () {
       var fileName = this.files[0].name;
@@ -246,51 +373,49 @@
 
   </script>
 
-<script>
-  const form = document.querySelector("#promForm");
-const submitButton = document.querySelector("#submit-btn");
-const scriptURL = 'https://script.google.com/macros/s/AKfycby2DHpsEIfUdNU-H3VNNXOtaKlt3wxR6-6iyT0TSJA_JAbh7rmH8Fmxpt8cIsNK3SahTw/exec';
+  <script>
+    const form = document.querySelector("#promForm");
+    const submitButton = document.querySelector("#submit-btn");
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby2DHpsEIfUdNU-H3VNNXOtaKlt3wxR6-6iyT0TSJA_JAbh7rmH8Fmxpt8cIsNK3SahTw/exec';
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  submitButton.disabled = true;
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      submitButton.disabled = true;
 
-  const formData = new FormData(form);
-  const imageInput = document.querySelector('#fileInput');
+      const formData = new FormData(form);
+      const imageInput = document.querySelector('#fileInput');
 
-  if (imageInput.files.length > 0) {
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      formData.append('image', event.target.result);
-      sendFormData(formData);
-    };
-    reader.readAsDataURL(imageInput.files[0]);
-  } else {
-    sendFormData(formData);
-  }
-});
-
-function sendFormData(formData) {
-  fetch(scriptURL, { method: 'POST', body: formData })
-    .then(response => {
-      if (response.ok) {
-        alert('Form submitted successfully!');
-        submitButton.disabled = false;
-        form.reset(); 
+      if (imageInput.files.length > 0) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          formData.append('image', event.target.result);
+          sendFormData(formData);
+        };
+        reader.readAsDataURL(imageInput.files[0]);
       } else {
-        throw new Error('Network response is not stable.');
+        sendFormData(formData);
       }
-    })
-    .catch(error => {
-      console.error('There was a problem with the form submission:', error);
-      alert('Form submission failed. Please try again.');
-      submitButton.disabled = false;
     });
-}
 
-</script>
+    function sendFormData(formData) {
+      fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => {
+          if (response.ok) {
+            alert('Form submitted successfully!');
+            submitButton.disabled = false;
+            form.reset();
+          } else {
+            throw new Error('Network response is not stable.');
+          }
+        })
+        .catch(error => {
+          console.error('There was a problem with the form submission:', error);
+          alert('Form submission failed. Please try again.');
+          submitButton.disabled = false;
+        });
+    }
+
+  </script>
 </body>
 
 </html>
-
-
