@@ -11,8 +11,8 @@
 }
 
 @font-face {
-  font-family: "voger";
-  src: url(/fonts/Voger\ Regular.woff2) format("woff2");
+  font-family: "avapore";
+  src: url(/fonts/Avapore.ttf) format("truetype");
 }
 
 * {
@@ -408,10 +408,10 @@ nav {
 
 #logo-subtext {
   color: #fff;
-  font-family: "venusrising";
+  font-family: "avapore";
   font-size: 1.7vh;
   margin-top: -4vh;
-  margin-left: -28vh;
+  margin-left: -26vh;
   word-spacing: 1vh;
 }
 
@@ -1078,10 +1078,10 @@ nav {
 
   #logo-subtext {
     color: #fff;
-    font-family: "venusrising";
+    font-family: "avapore";
     font-size: 1.7vw;
     margin-top: -5vw;
-    margin-left: -34.5vw;
+    margin-left: -32.5vw;
     word-spacing: 1vw;
   }
 
