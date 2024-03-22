@@ -16,7 +16,7 @@
     body {
       color: #fff;
       background-attachment: fixed;
-      background-color: #000;
+      background-color: #030303;
     }
 
 
@@ -174,11 +174,72 @@
       padding-bottom: 18px;
     }
 
+    .lights {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 150vw;
+    }
+
+    .hand-graphic {
+      position: absolute;
+      margin-top: -30vw;
+      width: 11vw;
+      filter: brightness(0.5);
+    }
+
+    .purple-planet {
+      position: absolute;
+      width: 18vw;
+      top: 20vw;
+      right: 0;
+      z-index: -1;
+      filter: sepia(1) brightness(0.3);
+      margin-right: -4rem;
+      transform: rotate(345deg);
+      transform: rotate(3deg);
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+
+      0% {
+        transform: rotate(-10deg);
+      }
+
+      100% {
+        transform: rotate(10deg);
+      }
+    }
+
     @media (max-width:765px) {
 
+      .purple-planet {
+        /* display: none; */
+      }
+
+
+
+      .hand-graphic {
+        position: absolute;
+        margin-top: -22vw;
+        width: 30vw;
+        filter: brightness(0.5);
+      }
+
+      .lights {
+        position: absolute;
+        top: 0;
+        z-index: -2;
+        margin-left: -5rem;
+        width: 103rem;
+        height: 14rem;
+      }
+
+
       #nav-bar {
-      padding-bottom: 0;
-    }
+        padding-bottom: 0;
+      }
 
       #cres-logo {
         margin-left: auto;
@@ -307,8 +368,6 @@
       width: 100vw;
       position: relative;
     }
-
-    
   </style>
 </head>
 
@@ -373,6 +432,9 @@
           </div>
         </form>
         <div>
+          <img class="purple-planet" src="/textures/purple-planet.png" alt="">
+          <img class="hand-graphic" src="/textures/handinglobe.png" alt="">
+          <img class="lights" src="textures/stringlights-jpg.jpg" alt="">
           <img class="retro-cd" src="/textures/retro_cd.png" alt="">
         </div>
         <img class="pink-gradient" src="/textures/pink-gradient-cropped.png" alt="">
