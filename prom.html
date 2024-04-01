@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CRESCENDO'24 Prom Registration</title>
+  <link rel="icon" type="image/x-icon" href="/media/favicon.webp">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +49,7 @@
       min-width: 19rem;
       height: 3rem;
       background-color: #3d3d3e;
-      border-style: none;
+      border-style: dotted;
       border-radius: 4rem;
       color: #b9b4c0;
       text-align: center;
@@ -198,24 +199,12 @@
       margin-right: -4rem;
       transform: rotate(345deg);
       transform: rotate(3deg);
-      animation: flicker 2s infinite alternate;
     }
-
-    @keyframes flicker {
-
-      0% {
-        transform: rotate(-10deg);
-      }
-
-      100% {
-        transform: rotate(10deg);
-      }
-    }
-
 
     #submit-btn {
       background-color: #593246;
       color: white;
+      border-style: none;
     }
 
     #submit-btn:hover {
@@ -283,7 +272,7 @@
         min-width: unset;
         height: 2rem;
         background-color: #3d3d3e;
-        border-style: none;
+        border-style: dotted;
         border-radius: 4rem;
         color: #b9b4c0;
         text-align: center;
@@ -399,6 +388,30 @@
         </div>
       </nav>
 
+      <img class="lights" src="textures/stringlights-jpg.jpg" alt="">
+
+
+      <script>
+        window.addEventListener('scroll', function () {
+          var navBar = document.getElementById('nav-bar');
+          var lightsImg = document.querySelector('.lights');
+          var rect = lightsImg.getBoundingClientRect();
+
+          // Checking if the image is in the viewport
+          if (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          ) {
+            // Image is in viewport, set nav bar background to transparent
+            navBar.style.backgroundColor = 'transparent';
+          } else {
+            // Image is not in viewport, set nav bar background to #3a3a3a4f
+            navBar.style.backgroundColor = '#3a3a3a4f';
+          }
+        });
+      </script>
 
       <div class="parent-container">
         <img id="prom-icon" src="/textures/prom-night-t.png" alt="">
@@ -451,7 +464,6 @@
         <div>
           <img class="purple-planet" src="/textures/purple-planet.png" alt="">
           <img class="hand-graphic" src="/textures/handinglobe.png" alt="">
-          <img class="lights" src="textures/stringlights-jpg.jpg" alt="">
           <img class="retro-cd" src="/textures/retro_cd.png" alt="">
         </div>
         <img class="pink-gradient" src="/textures/pink-gradient-cropped.png" alt="">
@@ -492,7 +504,7 @@
         .then(response => {
           alert("Form is submitted successfully.");
           submitBtn.disabled = false;
-          window.location.reload();
+          form.reset();
         })
         .catch(error => {
           console.error('Error!', error.message);

@@ -5,13 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         body {
             margin: 0;
             background-color: #000;
+        }
+
+
+        .event-box {
+            width: 85vw;
+            height: 26vh;
+            background-color: blueviolet;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 8rem;
+            border-radius: 2rem;
+        }
+
+        .event-content {
+            display: flex;
+            justify-content: space-between;
+            height: inherit;
+        }
+
+        .event-register-btn {
+            align-content: center;
+    background-color: beige;
+    height: max-content;
+    align-self: center;
+    padding: 1vw 6vw;
+    border-radius: .7rem 0 0 .7rem;
         }
     </style>
 </head>
@@ -22,7 +48,27 @@
             <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
                     aria-hidden="true"></i>BACK</button>
         </div>
-        <h1 class="update-txt">Events Lineup to be announced soon!</h1>
+
+
+
+        <div>
+            <h3>Cultural</h3>
+
+            <h3>Academic</h3>
+
+        </div>
+        <div class="event-box">
+            <div class="event-content">
+                <div class="event-content-left">
+                    <h1>Treasure Hunt</h1>
+                    <h5>Yuva E-Cell</h5>
+                </div>
+
+                <h3 class="event-register-btn"> Register</h3>
+
+            </div>
+        </div>
+
     </div>
 </body>
 
