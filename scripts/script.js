@@ -205,21 +205,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const popupContainer = document.querySelector('.popup-container');
   const mainWebsite = document.querySelector('.main-website');
   const teleportBtn = document.getElementById('teleport-btn');
   const closeBtn = document.querySelector('.fa.fa-times');
 
-  teleportBtn.addEventListener('click', function() {
-      setTimeout(function() {
-          popupContainer.classList.add('open');
-          mainWebsite.classList.add('open');
-      }, 15000);
+  teleportBtn.addEventListener('click', function () {
+    setTimeout(function () {
+      popupContainer.classList.add('open');
+      mainWebsite.classList.add('open');
+    }, 15000);
   });
 
-  closeBtn.addEventListener('click', function() {
-      popupContainer.classList.remove('open');
-      mainWebsite.classList.remove('open');
+  closeBtn.addEventListener('click', function () {
+    popupContainer.classList.remove('open');
+    mainWebsite.classList.remove('open');
   });
 });
