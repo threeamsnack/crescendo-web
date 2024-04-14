@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -41,34 +42,263 @@
             width: 32vh;
             height: 6vh;
         }
+
+
+        .por-container {
+            color: #fff;
+            width: 230px;
+            height: 380px;
+            background-color: #49494c61;
+            text-align: center;
+            font-family: 'chakrapetch';
+            border-radius: 11px;
+            filter: grayscale(.8);
+        }
+
+        .por-container:hover {
+            filter: none;
+        }
+
+        .por-image-zoom {
+            width: 230px;
+            height: 230px;
+            overflow: hidden;
+            border-radius: 11px 11px 0px 0px;
+        }
+
+        .por-image-zoom--colorize img {
+            transition: transform .4s, filter .3s ease-in-out;
+            filter: grayscale(100%);
+            width: 230px;
+        }
+
+
+        .por-container:hover img {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+        .por-name {
+            margin-bottom: -8px;
+        }
+
+        .por-contact {
+            display: flex;
+            margin: 0px 2.5rem 0px 4rem;
+            justify-content: space-around;
+            font-size: 21px;
+        }
+
+        .por-call {
+            background-color: #69696fad;
+            padding: 7px 0px 7px 0px;
+            margin: 1px 1px;
+            width: 143px;
+            position: relative;
+            margin-top: -3.7rem;
+            border-radius: 16px 16px 16px 1px;
+            margin-left: 9rem;
+        }
+
+        #phone-icon-mobile {
+            display: none;
+        }
+
+        #phone-icon-desktop {
+            display: block;
+        }
+
+        #por-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+            margin: 0px 9rem;
+            gap: 2rem;
+            padding-bottom: 30rem;
+        }
+
+        .fa-phone-mob {
+            display: none;
+        }
+
+        .por-call-href {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        @media (max-width: 1280px) {
+            #por-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 1038px) {
+            #por-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 765px) {
+            #por-grid {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2.5rem;
+                margin: 0px 4rem;
+            }
+
+            .por-container {
+                width: 215px;
+                height: 345px;
+            }
+
+            .por-name {
+                margin-top: 14px;
+            }
+
+            .por-role {
+                margin: 18px auto 16px auto;
+            }
+
+            .por-image-zoom {
+                width: 215px;
+                height: 215px;
+            }
+
+            .por-contact {
+                margin: 0px 3rem 0px 3rem;
+            }
+
+            .fa-phone-desktop {
+                display: none;
+            }
+
+            .fa-phone-mob {
+                display: block;
+            }
+        }
+
+        .por-call {
+            display: none;
+        }
+
+        .por-call.show {
+            display: block;
+        }
     </style>
 </head>
 
 <body style="overflow: scroll;">
-    <div class="event-container">
-        <div class="close-btn-cont">
-            <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
-                    aria-hidden="true"></i>BACK</button>
-        </div>
-        <div style="height: 75vh;">
-            <h1 class="contact-head">Fest Coordinators</h1>
-            <hr>
-            <table class="contact-text">
-                <tr>
-                    <td class="contact-data">Om Arora</td>
-                    <td class="contact-data">+91 9717447303</td>
-                </tr>
-                <tr>
-                    <td class="contact-data">Abhinav Rathore</td>
-                    <td class="contact-data">+91 7007405958</td>
-                </tr>
-            </table>
-            <h1 class="contact-head" style="    margin-top: 17vh;">Website</h1>
-            <hr>
-            <div style="margin-top: 5vh;">
-                <h3 class="contact-text-2">Designed and Developed by Pradhyum</h3>
-                <h3 class="contact-text-2">3d Assests by SocialBuildOut</h3>
-                <h3 class="contact-text-2">Content by Aditya Mehra</h3>
+    <div class="content-container-scroll">
+        <div class="contact-container">
+            <div class="close-btn-cont">
+                <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
+                        aria-hidden="true"></i>BACK</button>
+            </div>
+            <div style="height: 75vh;">
+                <h1 class="contact-head">Fest Coordinators</h1>
+                <hr>
+
+
+                <div id="por-grid">
+                    <div class="por-container">
+                        <div class="por-image-zoom por-image-zoom--colorize">
+                            <img src="/Screenshot 2024-04-13 at 12.37.42 AM.png" alt="">
+                        </div>
+                        <h2 class="por-name">Om Arora</h2>
+                        <h4 class="por-role">President</h4>
+                        <div class="por-contact">
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-phone fa-phone-desktop"></i>
+                            <a class="por-call-href" href="tel:+919717447303"><i
+                                    class="fa fa-phone fa-phone-mob"></i></a>
+                        </div>
+                        <h5 class="por-call">97174 47303</h5>
+                    </div>
+                    <div class="por-container">
+                        <div class="por-image-zoom por-image-zoom--colorize">
+                            <img src="/Screenshot 2024-04-13 at 12.37.42 AM.png" alt="">
+                        </div>
+                        <h2 class="por-name">Abhinav Rathore</h2>
+                        <h4 class="por-role">Associate President</h4>
+                        <div class="por-contact">
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-phone fa-phone-desktop"></i>
+                            <a class="por-call-href" href="tel:+917007405958"><i
+                                    class="fa fa-phone fa-phone-mob"></i></a>
+                        </div>
+                        <h5 class="por-call">70074 05958</h5>
+                    </div>
+                    <div class="por-container">
+                        <div class="por-image-zoom por-image-zoom--colorize">
+                            <img src="/Screenshot 2024-04-13 at 12.37.42 AM.png" alt="">
+                        </div>
+                        <h2 class="por-name">Dushyant</h2>
+                        <h4 class="por-role">Vice President</h4>
+                        <div class="por-contact">
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-phone fa-phone-desktop"></i>
+                            <a class="por-call-href" href="tel:+918810985640"><i
+                                    class="fa fa-phone fa-phone-mob"></i></a>
+                        </div>
+                        <h5 class="por-call">88109 85640</h5>
+                    </div>
+                    <div class="por-container">
+                        <div class="por-image-zoom por-image-zoom--colorize">
+                            <img src="/Screenshot 2024-04-13 at 12.37.42 AM.png" alt="">
+                        </div>
+                        <h2 class="por-name">Vishesh Aswal</h2>
+                        <h4 class="por-role">Fest Coordinator</h4>
+                        <div class="por-contact">
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-phone fa-phone-desktop"></i>
+                            <a class="por-call-href" href="tel:+919310428473"><i
+                                    class="fa fa-phone fa-phone-mob"></i></a>
+                        </div>
+                        <h5 class="por-call">93104 28473</h5>
+                    </div>
+                </div>
+
+                <script>
+                    const porContacts = document.querySelectorAll('.por-container');
+
+                    porContacts.forEach(function (porContact) {
+                        const phoneIcon = porContact.querySelector('.fa.fa-phone');
+                        const porCall = porContact.querySelector('.por-call');
+
+                        phoneIcon.addEventListener('mouseover', function () {
+                            porCall.classList.add('show');
+                        });
+
+                        phoneIcon.addEventListener('mouseout', function () {
+                            porCall.classList.remove('show');
+                        });
+                    });
+
+                </script>
+
+
+
+
+
+
+
+                <div class="credit-footer">
+                    <p class="credit-text">Website Designed and Developed by <a
+                            href="https://www.linkedin.com/in/pradhyum-%E2%80%8E-0176a828a" target="_blank"
+                            class="credit-name">Pradhyum</a>&nbsp;·&nbsp;<a
+                            href="https://www.instagram.com/thesocialbuildout?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            class="credit-name" target="_blank">thesocialbuildout</a>
+                    </p>
+                    <p class="credit-text">Content curated by <a
+                            href="https://www.instagram.com/meh_raditya?igsh=MXJ0cm41ZDMyZTRmYQ%3D%3D"
+                            class="credit-name" target="_blank">Aditya
+                            Mehra</a></p>
+                </div>
+
             </div>
         </div>
     </div>

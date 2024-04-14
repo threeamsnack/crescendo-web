@@ -86,24 +86,6 @@ function toggleButtonVisibility() {
 }
 
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const toggleNav = document.querySelector('.toggle-nav');
-//   const navStack = document.querySelector('.navbtn-stack');
-//   const landingText = document.getElementById('landing-text');
-//   const background = document.querySelector('#sscbs-model');
-
-
-//   toggleNav.addEventListener('click', function () {
-
-//     toggleNav.classList.toggle('active');
-//     navStack.classList.toggle('active');
-//     landingText.classList.toggle('active');
-//     background.classList.toggle('active');
-
-//   });
-// });
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const toggleNav = document.querySelector('.toggle-nav');
   const navStack = document.querySelector('.navbtn-stack');
@@ -223,3 +205,19 @@ document.addEventListener("DOMContentLoaded", function () {
     mainWebsite.classList.remove('open');
   });
 });
+
+
+const porContacts = document.querySelectorAll('.por-container');
+
+                    porContacts.forEach(function (porContact) {
+                        const phoneIcon = porContact.querySelector('.fa.fa-phone');
+                        const porCall = porContact.querySelector('.por-call');
+
+                        phoneIcon.addEventListener('mouseover', function () {
+                            porCall.classList.add('show');
+                        });
+
+                        phoneIcon.addEventListener('mouseout', function () {
+                            porCall.classList.remove('show');
+                        });
+                    });
