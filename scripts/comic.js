@@ -50,7 +50,7 @@ window.onload = function () {
         document.querySelector('.loader-btn-container').style.display = 'block';
         document.querySelector('#next-btn-1').style.display = 'block';
         typeWriterdisclaimer("disclaimer-body-txt");
-    }, 1000);
+    }, 500);
 }
 
 animateBlinkDots("blink-dots");
