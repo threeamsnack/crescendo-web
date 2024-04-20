@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const mobnavStack = document.querySelector('.navbtn-stack-mob');
   const mobnavBtn = document.querySelector('.nav-btn');
   const logoSubtext = document.querySelector('#logo-subtext');
+  const promBtn = document.querySelector('.space-btn');
 
 
   let isToggled = false;
@@ -111,6 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
       mobBackground.style.filter = 'grayscale(1)';
       logoSubtext.style.display = 'block';
       isToggled = true;
+      promBtn.style.filter = 'blur(2px) grayscale(1)';
+      promBtn.style.pointerEvents = 'none';
     } else {
       navStack.style.opacity = '0';
       navStack.style.pointerEvents = 'none';
@@ -123,6 +126,8 @@ document.addEventListener('DOMContentLoaded', function () {
       mobBackground.style.filter = 'none';
       logoSubtext.style.display = 'none';
       isToggled = false;
+      promBtn.style.filter = 'none';
+      promBtn.style.pointerEvents = 'auto';
     }
   });
 });

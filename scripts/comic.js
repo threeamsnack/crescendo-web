@@ -41,6 +41,7 @@ function typeWriterright() {
     }, speed);
 }
 
+document.querySelector('.space-btn').style.display = 'none';
 window.onload = function () {
     document.querySelector('.loading-txt').style.display = 'block';
     setTimeout(function () {
@@ -49,6 +50,7 @@ window.onload = function () {
         document.querySelector('.disclaimer-container').style.display = 'block';
         document.querySelector('.loader-btn-container').style.display = 'block';
         document.querySelector('#next-btn-1').style.display = 'block';
+        document.querySelector('.space-btn').style.display = 'none';
         typeWriterdisclaimer("disclaimer-body-txt");
     }, 500);
 }
@@ -74,6 +76,8 @@ document.getElementById('teleport-btn').onclick = function () {
     document.getElementsByClassName('teleport-vid')[0].muted = true; 
     document.getElementsByClassName('teleport-vid')[0].play();
     audio.play();
+    document.querySelector('.space-btn').style.display = 'block';
+
    
     setTimeout(function () {
         teleportContainer.classList.add('fade-out');
