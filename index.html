@@ -10,10 +10,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="/css/events.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Broken+Fax&family=Silkscreen:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Broken+Fax&family=Silkscreen:wght@400;700&display=swap"
     rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-30B9J51LQW"></script>
   <script>
@@ -391,8 +395,47 @@
               <button class="closeall"> <i style="align-self: center;" class="fa fa-chevron-left"
                   aria-hidden="true"></i>BACK</button>
             </div>
-            <div class="event-container">
-              <h1 class="update-txt">Event Lineup to be announced soon!</h1>
+            <div class="event-container" style="margin-top: 11rem;">
+
+
+
+
+              <div class="event-box">
+                <div class="event-img-wrapper">
+                  <img class="event-img-bg" src="/Prom'23.mp4 - VLC media player 4_20_2024 11_48_32 PM.png" alt="">
+                </div>
+                <div class="event-content">
+                  <div>
+                    <div class="event-content-left">
+                      <div class="event-info">
+                        <h1 class="event-title">Prom Night</h1>
+                        <h5 class="event-org">CRESCENDO </h5>
+                        <h5 class="event-org">29 April, 2024</h5>
+                      </div>
+                    </div>
+                    <div class="event-gradient"></div>
+                  </div>
+               <a class="event-register-link" href="prom.html"><h3 class="event-register-btn"> Register</h3></a>  
+                </div>
+              </div>
+
+
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  const glitchButtons = document.querySelectorAll('.btn-glitch-fill');
+
+                  glitchButtons.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                      // Change .grad-wrapper to display flex
+                      const wrappers = document.querySelectorAll('.grad-wrapper');
+                      wrappers.forEach(function (wrapper) {
+                        wrapper.style.display = 'flex';
+                      });
+                    });
+                  });
+                });
+              </script>
+
             </div>
           </div>
         </div>
@@ -401,8 +444,8 @@
         <div class="sponsers">
           <div class="content-container-scroll">
             <div class="close-btn-cont">
-              <button class="closeall" style="margin-top: 1vh;"> <i style="align-self: center;" class="fa fa-chevron-left"
-                  aria-hidden="true"></i>BACK</button>
+              <button class="closeall" style="margin-top: 1vh;"> <i style="align-self: center;"
+                  class="fa fa-chevron-left" aria-hidden="true"></i>BACK</button>
             </div>
             <div class="sponsers-container" style="margin-top: 9rem;">
               <h1 class="sponsers-head">Sponsors</h1>
@@ -448,8 +491,8 @@
         <div class="past">
           <div class="content-container-scroll">
             <div class="close-btn-cont">
-              <button class="closeall" style="margin-top: 1vh;"> <i style="align-self: center;" class="fa fa-chevron-left"
-                  aria-hidden="true"></i>BACK</button>
+              <button class="closeall" style="margin-top: 1vh;"> <i style="align-self: center;"
+                  class="fa fa-chevron-left" aria-hidden="true"></i>BACK</button>
             </div>
             <div class="past-container">
               <div class="past-video-container">
@@ -495,66 +538,71 @@
 <hr> -->
                 <div id="por-grid">
                   <div class="por-container">
-                      <div class="por-image-zoom por-image-zoom--colorize">
-                          <img src="/media/om.png" alt="">
-                      </div>
-                      <h2 class="por-name">Om Arora</h2>
-                      <h4 class="por-role">President</h4>
-                      <div class="por-contact">
-                        <a target="_blank" class="por-link"  href="https://www.instagram.com/rrrrrrommm/"><i class="fa fa-instagram"></i></a> 
-                        <a target="_blank" class="por-link"  href="https://www.linkedin.com/in/om-arora-67535b229/"><i class="fa fa-linkedin"></i></a>
-                        <i class="fa fa-phone fa-phone-desktop"></i>
-                          <a class="por-link" href="tel:+919717447303"><i
-                                  class="fa fa-phone fa-phone-mob"></i></a>
-                      </div>
-                      <h5 class="por-call">97174 47303</h5>
+                    <div class="por-image-zoom por-image-zoom--colorize">
+                      <img src="/media/om.png" alt="">
+                    </div>
+                    <h2 class="por-name">Om Arora</h2>
+                    <h4 class="por-role">President</h4>
+                    <div class="por-contact">
+                      <a target="_blank" class="por-link" href="https://www.instagram.com/rrrrrrommm/"><i
+                          class="fa fa-instagram"></i></a>
+                      <a target="_blank" class="por-link" href="https://www.linkedin.com/in/om-arora-67535b229/"><i
+                          class="fa fa-linkedin"></i></a>
+                      <i class="fa fa-phone fa-phone-desktop"></i>
+                      <a class="por-link" href="tel:+919717447303"><i class="fa fa-phone fa-phone-mob"></i></a>
+                    </div>
+                    <h5 class="por-call">97174 47303</h5>
                   </div>
                   <div class="por-container">
-                      <div class="por-image-zoom por-image-zoom--colorize">
-                          <img src="/media/abhinav.png" alt="">
-                      </div>
-                      <h2 class="por-name">Abhinav Rathore</h2>
-                      <h4 class="por-role">Vice President</h4>
-                      <div class="por-contact">
-                        <a target="_blank" class="por-link" href="https://www.instagram.com/abhinavrathoree/"><i class="fa fa-instagram"></i></a> 
-                         <a target="_blank" class="por-link" href="https://www.linkedin.com/in/abhinav-rathore-a81003230/"><i class="fa fa-linkedin"></i></a>
-                          <i class="fa fa-phone fa-phone-desktop"></i>
-                          <a class="por-link" href="tel:+917007405958"><i
-                                  class="fa fa-phone fa-phone-mob"></i></a>
-                      </div>
-                      <h5 class="por-call">70074 05958</h5>
+                    <div class="por-image-zoom por-image-zoom--colorize">
+                      <img src="/media/abhinav.png" alt="">
+                    </div>
+                    <h2 class="por-name">Abhinav Rathore</h2>
+                    <h4 class="por-role">Vice President</h4>
+                    <div class="por-contact">
+                      <a target="_blank" class="por-link" href="https://www.instagram.com/abhinavrathoree/"><i
+                          class="fa fa-instagram"></i></a>
+                      <a target="_blank" class="por-link"
+                        href="https://www.linkedin.com/in/abhinav-rathore-a81003230/"><i class="fa fa-linkedin"></i></a>
+                      <i class="fa fa-phone fa-phone-desktop"></i>
+                      <a class="por-link" href="tel:+917007405958"><i class="fa fa-phone fa-phone-mob"></i></a>
+                    </div>
+                    <h5 class="por-call">70074 05958</h5>
                   </div>
                   <div class="por-container">
-                      <div class="por-image-zoom por-image-zoom--colorize">
-                          <img src="/media/dushyant.png" alt="">
-                      </div>
-                      <h2 class="por-name">Dushyant</h2>
-                      <h4 class="por-role">Vice President</h4>
-                      <div class="por-contact">
-                        <a target="_blank" class="por-link" href="https://www.instagram.com/_.dushyantt._/"><i class="fa fa-instagram"></i></a> 
-                        <a target="_blank" class="por-link" href="https://www.linkedin.com/in/dushyant-kumar-gautam-a311551a7/"><i class="fa fa-linkedin"></i></a>
-                        <i class="fa fa-phone fa-phone-desktop"></i>
-                          <a class="por-link" href="tel:+918810985640"><i
-                                  class="fa fa-phone fa-phone-mob"></i></a>
-                      </div>
-                      <h5 class="por-call">88109 85640</h5>
+                    <div class="por-image-zoom por-image-zoom--colorize">
+                      <img src="/media/dushyant.png" alt="">
+                    </div>
+                    <h2 class="por-name">Dushyant</h2>
+                    <h4 class="por-role">Vice President</h4>
+                    <div class="por-contact">
+                      <a target="_blank" class="por-link" href="https://www.instagram.com/_.dushyantt._/"><i
+                          class="fa fa-instagram"></i></a>
+                      <a target="_blank" class="por-link"
+                        href="https://www.linkedin.com/in/dushyant-kumar-gautam-a311551a7/"><i
+                          class="fa fa-linkedin"></i></a>
+                      <i class="fa fa-phone fa-phone-desktop"></i>
+                      <a class="por-link" href="tel:+918810985640"><i class="fa fa-phone fa-phone-mob"></i></a>
+                    </div>
+                    <h5 class="por-call">88109 85640</h5>
                   </div>
                   <div class="por-container">
-                      <div class="por-image-zoom por-image-zoom--colorize">
-                          <img src="/media/vishesh.png" alt="">
-                      </div>
-                      <h2 class="por-name">Vishesh Aswal</h2>
-                      <h4 class="por-role">Fest Coordinator</h4>
-                      <div class="por-contact">
-                        <a target="_blank" class="por-link" href="https://www.instagram.com/vishesh.aswal/"><i class="fa fa-instagram"></i></a> 
-                        <a target="_blank" class="por-link" href="https://www.linkedin.com/in/vishesh-a-57b2ba223/"><i class="fa fa-linkedin"></i></a>
-                        <i class="fa fa-phone fa-phone-desktop"></i>
-                          <a class="por-link" href="tel:+919310428473"><i
-                                  class="fa fa-phone fa-phone-mob"></i></a>
-                      </div>
-                      <h5 class="por-call">93104 28473</h5>
+                    <div class="por-image-zoom por-image-zoom--colorize">
+                      <img src="/media/vishesh.png" alt="">
+                    </div>
+                    <h2 class="por-name">Vishesh Aswal</h2>
+                    <h4 class="por-role">Fest Coordinator</h4>
+                    <div class="por-contact">
+                      <a target="_blank" class="por-link" href="https://www.instagram.com/vishesh.aswal/"><i
+                          class="fa fa-instagram"></i></a>
+                      <a target="_blank" class="por-link" href="https://www.linkedin.com/in/vishesh-a-57b2ba223/"><i
+                          class="fa fa-linkedin"></i></a>
+                      <i class="fa fa-phone fa-phone-desktop"></i>
+                      <a class="por-link" href="tel:+919310428473"><i class="fa fa-phone fa-phone-mob"></i></a>
+                    </div>
+                    <h5 class="por-call">93104 28473</h5>
                   </div>
-              </div>
+                </div>
 
 
                 <div class="credit-footer">

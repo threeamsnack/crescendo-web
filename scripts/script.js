@@ -214,15 +214,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const porContacts = document.querySelectorAll('.por-container');
 
-                    porContacts.forEach(function (porContact) {
-                        const phoneIcon = porContact.querySelector('.fa.fa-phone');
-                        const porCall = porContact.querySelector('.por-call');
+porContacts.forEach(function (porContact) {
+  const phoneIcon = porContact.querySelector('.fa.fa-phone');
+  const porCall = porContact.querySelector('.por-call');
 
-                        phoneIcon.addEventListener('mouseover', function () {
-                            porCall.classList.add('show');
-                        });
+  phoneIcon.addEventListener('mouseover', function () {
+    porCall.classList.add('show');
+  });
 
-                        phoneIcon.addEventListener('mouseout', function () {
-                            porCall.classList.remove('show');
-                        });
-                    });
+  phoneIcon.addEventListener('mouseout', function () {
+    porCall.classList.remove('show');
+  });
+});
+
+
