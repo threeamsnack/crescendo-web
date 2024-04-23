@@ -68,7 +68,6 @@
             min-width: 646px;
             position: fixed;
             z-index: -1;
-            filter: sepia(1);
         }
 
         .event-img-wrapper:after {
@@ -100,11 +99,11 @@
             z-index: -1;
             margin-top: -13.5rem;
             height: 215px;
-            margin-left: 19.95vw;
+            margin-left: 35.99vw;
         }
 
         .event-content-left {
-            width: 20vw;
+            width: 36vw;
             min-width: 201px;
             background-color: hsl(0deg 0% 0% / 74%);
             height: 215px;
@@ -114,7 +113,8 @@
         .event-info {
             width: max-content;
             margin-left: 2vw;
-            margin-top: 2.8rem;
+            margin-top: 2.3rem;
+            text-transform: capitalize;
         }
 
         .event-title {
@@ -125,17 +125,19 @@
         .event-org {
             font-family: poppins;
             font-weight: 300;
-            color: #ffffffd9;
+            color: #fff;
             opacity: 0.9;
             font-size: 15px;
+            margin: 19px 0px;
         }
 
-        @media (max-width:1011px) {
-            .event-gradient {
-                margin-left: 12.55rem;
-            }
+        .event-desc {
+            font-family: 'Poppins';
+            font-size: 13px;
+            color: #d9d9d9c2;
+            margin-top: -21px;
+            font-weight: 400;
         }
-
 
         @media (max-width:765px) {
 
@@ -145,11 +147,13 @@
             }
 
             .event-info {
-                margin-left: 2.7vw;
+                margin-left: 6.7vw;
+                margin-top: 2.5rem;
             }
 
             .event-title {
-                font-size: 1.7rem;
+                font-size: 20px;
+                width: 10rem;
             }
 
             .event-register-btn {
@@ -161,6 +165,27 @@
                 border-color: #ffffff87;
                 padding: 4.3vw 9vw;
                 border-radius: 23px 0 0 0rem;
+            }
+
+            .event-gradient {
+                margin-left: 201px;
+            }
+
+            .event-desc {
+                font-size: 11px;
+                margin-top: -11px;
+            }
+
+            .event-org {
+                font-size: 13px;
+            }
+
+            .event-img-bg {
+                margin-left: -47px;
+            }
+
+            .sort-txt {
+                color: #fff;
             }
         }
     </style>
@@ -174,60 +199,890 @@
         </div>
 
 
-
         <div>
-            <h3>Cultural</h3>
-
-            <h3>Academic</h3>
-
+            <h3 class="sort-txt">Sort</h3>
+            <select id="filter" style="margin-top: 10rem;">
+                <option value="all">All Events</option>
+                <option value="day0">Day 0 - 29th April</option>
+                <option value="day1">Day 1 - 30th April</option>
+                <option value="day2">Day 2 - 1st May</option>
+                <option value="academic">Academic Events</option>
+                <option value="cultural">Cultural Events</option>
+            </select>
         </div>
-        <div class="event-box">
-            <div class="event-img-wrapper">
-                <img class="event-img-bg" src="/Prom'23.mp4 - VLC media player 4_20_2024 11_48_32 PM.png" alt="">
-            </div>
-            <div class="event-content">
-                <div style="display: flex;">
-                    <div class="event-content-left">
-                        <div class="event-info">
-                            <h1 class="event-title">Prom Night</h1>
-                            <h5 class="event-org">CRESCENDO </h5>
-                            <h5 class="event-org">29 April, 2024</h5>
-                        </div>
-                    </div>
-                    <div class="event-gradient"></div>
+
+
+
+        <div id="event-cards-container" style="margin-bottom: 5rem;">
+
+            <div class="event-box all day0 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/Prom'23.mp4 - VLC media player 4_20_2024 11_48_32 PM.png" alt="">
                 </div>
-                <h3 class="event-register-btn"> Register</h3>
-
-            </div>
-        </div>
-
-        <div class="event-box">
-            <div class="event-img-wrapper">
-                <img class="event-img-bg" src="/Prom'23.mp4 - VLC media player 4_20_2024 11_48_32 PM.png" alt="">
-            </div>
-            <div class="event-content">
-
-                <div>
-                    <div class="event-content-left">
-                        <div class="event-info">
-                            <h1 class="event-title">Prom Night</h1>
-                            <h5 class="event-org">CRESCENDO </h5>
-                            <h5 class="event-org">29 April, 2024</h5>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">Prom Night</h1>
+                                <h5 class="event-org">CRESCENDO</h5>
+                                <h5 class="event-org">29 April, 2024</h5>
+                            </div>
                         </div>
+                        <div class="event-gradient"></div>
                     </div>
-                    <div class="event-gradient"></div>
+                    <h3 class="event-register-btn"> Register</h3>
                 </div>
-
-                <h3 class="event-register-btn"> Register</h3>
-
             </div>
+
+
+            <div class="event-box all day0 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">BIBLIOTHECA</h1>
+                                <h5 class="event-desc">Annual Flagship Event</h5>
+                                <h5 class="event-org">LITSOC - The Literary Society</h5>
+                                <h5 class="event-org">29th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/3vBuIZj?r=qr" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">VENTURE HUNT</h1>
+                                <h5 class="event-desc">Treasure Hunt Challenge</h5>
+                                <h5 class="event-org">Yuva - The Entrepreneurship Cell</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/Venture-Hunt?r=qr" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day2 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">IFSA MIXER</h1>
+                                <h5 class="event-desc">annual networking event</h5>
+                                <h5 class="event-org">IFSA</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">Action Fiesta</h1>
+                                <h5 class="event-desc">zorbing | nerf war| laser tag</h5>
+                                <h5 class="event-org">Kronos - The Tech Soc</h5>
+                                <h5 class="event-org">30th - 1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="event-box all day2 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">Code Twist 2.0</h1>
+                                <h5 class="event-desc">coding comp</h5>
+                                <h5 class="event-org">ACM CS chapter</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/Code_Twist?r=qr" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">beauty redefined</h1>
+                                <h5 class="event-desc">mixer session</h5>
+                                <h5 class="event-org">girlup ruhi</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day 2 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">CBS QuizFest'24</h1>
+                                <h5 class="event-org">illuminati - the quizzing soc</h5>
+                                <h5 class="event-org">30th - 1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/CBSQuizFest2024?r=qr" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">ENCORE</h1>
+                                <h5 class="event-desc">annual flagship dance event</h5>
+                                <h5 class="event-org">blitz - the western dance soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfnhzNDJQVrsgs88010w-1JBwB6qEjS5Xg4JoVoPvD8jFFmKg/closedform"
+                        target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">Mantavya</h1>
+                                <h5 class="event-desc">hr-debate comp</h5>
+                                <h5 class="event-org">anthropos - the hrd cell</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://qrco.de/bezSJK" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">IRIS'24</h1>
+                                <h5 class="event-desc">annual queer event</h5>
+                                <h5 class="event-org">qsa sscbs</h5>
+                                <h5 class="event-org">30th-1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://qrco.de/bezSJK" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="event-box all day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">dard-e-disco</h1>
+                                <h5 class="event-desc">period pain simulator</h5>
+                                <h5 class="event-org">rotaract sscbs</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">Changemakers cup</h1>
+                                <h5 class="event-desc">b-plan comp</h5>
+                                <h5 class="event-org">CDF sscbs</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link"
+                        href="https://unstop.com/competitions/cdf-changemakers-cup-b-plan-competition-shaheed-sukhdev-college-of-business-studies-sscbs-du-delhi-935236"
+                        target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">venturex</h1>
+                                <h5 class="event-desc">global investment insignia</h5>
+                                <h5 class="event-org">CEO sscbs</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://me-qr.com/xuMuT4He" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">case chronicles</h1>
+                                <h5 class="event-desc">marketing case study challenge</h5>
+                                <h5 class="event-org">communique x grandeur</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">viz-a-thon 2.0</h1>
+                                <h5 class="event-desc">data visualization comp</h5>
+                                <h5 class="event-org">nucleus - the analytics soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/Vizathon_Nucleus" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">alla prima</h1>
+                                <h5 class="event-desc">annual art fest of sscbs</h5>
+                                <h5 class="event-org">kriti - the fine arts soc</h5>
+                                <h5 class="event-org">30th - 1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/Vizathon_Nucleus" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">cynosure</h1>
+                                <h5 class="event-desc">annual flagship event</h5>
+                                <h5 class="event-org">darkroom - the visual arts soc</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="event-box all day2 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">cbs strategy challenge</h1>
+                                <h5 class="event-desc">case study comp</h5>
+                                <h5 class="event-org">synergy - the corporate soc</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/CBSstrategy" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">mic'd up with mic</h1>
+                                <h5 class="event-desc">a podcast episode</h5>
+                                <h5 class="event-org">MIC - the corporate cell</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">bidweiser</h1>
+                                <h5 class="event-desc">finance & valuation challenge</h5>
+                                <h5 class="event-org">FMA - the international finance soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://qr.codes/FP32uo" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">raasa</h1>
+                                <h5 class="event-desc">annual theatre fest</h5>
+                                <h5 class="event-org">4th wall - the dramatics soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">Jit buzzinga</h1>
+                                <h5 class="event-desc">treasure hunt challenge</h5>
+                                <h5 class="event-org">APICS - The supply chain soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://me-qr.com/kM6cmQyw" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">colludium</h1>
+                                <h5 class="event-desc">chess | table tennis | fifa</h5>
+                                <h5 class="event-org">Parishram - The sports soc</h5>
+                                <h5 class="event-org">30th-1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link"
+                        href="https://linktr.ee/qr/c6bba5a7-fdc5-49bd-a85e-2f73bf6a8347?utm_source=qr_code"
+                        target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">recycle right challenge</h1>
+                                <h5 class="event-desc">recycling comp</h5>
+                                <h5 class="event-org">Ecoclub - the environment soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">vidya setu</h1>
+                                <h5 class="event-desc">education upliftment case</h5>
+                                <h5 class="event-org">V2S - the knowledge resource soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">madlibs</h1>
+                                <h5 class="event-desc">these libs do lie</h5>
+                                <h5 class="event-org">markIt - the marketing soc</h5>
+                                <h5 class="event-org">30th april, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/madlibs2024" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day2 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">chakravyuh 3.0</h1>
+                                <h5 class="event-desc">case study comp</h5>
+                                <h5 class="event-org">IMA sscbs</h5>
+                                <h5 class="event-org">1st may, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://me-qr.com/SUtCL9LO" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day2 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">yi impact-a-thon</h1>
+                                <h5 class="event-desc">the case convergence</h5>
+                                <h5 class="event-org">CII yuva sscbs</h5>
+                                <h5 class="event-org">1st may, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://me-qr.com/Gss3jPW3" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">muqammal</h1>
+                                <h5 class="event-desc">the open-space event</h5>
+                                <h5 class="event-org">verve - the street play soc</h5>
+                                <h5 class="event-org">30th - 1st may, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">the simulation challenge</h1>
+                                <h5 class="event-org">ecovision - the economics soc</h5>
+                                <h5 class="event-org">30th april, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link"
+                        href="https://unstop.com/competitions/the-simulation-challenge-shaheed-sukhdev-college-of-business-studies-sscbs-du-delhi-963444"
+                        target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">connect 180</h1>
+                                <h5 class="event-desc">networking mixer event</h5>
+                                <h5 class="event-org">180 degrees consulting</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">a-z debating workshop</h1>
+                                <h5 class="event-desc">master the art of persuasion</h5>
+                                <h5 class="event-org">CBS debating soc</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">capital conquest</h1>
+                                <h5 class="event-desc">finance & strategy challenge</h5>
+                                <h5 class="event-org">FinX x BFE</h5>
+                                <h5 class="event-org">30th april, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://bit.ly/CapitalConquest?r=qr" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">octaves</h1>
+                                <h5 class="event-desc">annual music fest</h5>
+                                <h5 class="event-org">dhwani - the music soc</h5>
+                                <h5 class="event-org">30th - 1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://linktr.ee/OCTAVES24" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">quest for change</h1>
+                                <h5 class="event-desc">social case study comp</h5>
+                                <h5 class="event-org">kartavya x FLC</h5>
+                                <h5 class="event-org">30th april, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                    <a class="event-register-link" href="https://me-qr.com/NRh9KLOf" target="_blank">
+                        <h3 class="event-register-btn"> Register</h3>
+                    </a>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">mindful gaming garden</h1>
+                                <h5 class="event-org">sadhana - the yoga soc</h5>
+                                <h5 class="event-org">30th - 1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">wishing wall</h1>
+                                <h5 class="event-org">kartavya x NSS</h5>
+                                <h5 class="event-org">30th april - 8th may, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day2 cultural">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">plastic waste drive</h1>
+                                <h5 class="event-desc">collection drive</h5>
+                                <h5 class="event-org">enactus sscbs</h5>
+                                <h5 class="event-org">1st May, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-box all day1 academic">
+                <div class="event-img-wrapper">
+                    <img class="event-img-bg" src="/textures/event-bg.png" alt="">
+                </div>
+                <div class="event-content">
+                    <div>
+                        <div class="event-content-left">
+                            <div class="event-info">
+                                <h1 class="event-title">jurisprudence</h1>
+                                <h5 class="event-desc">moot court | strategy & policy</h5>
+                                <h5 class="event-org">lawrence - the law forum</h5>
+                                <h5 class="event-org">30th April, 2024</h5>
+                            </div>
+                        </div>
+                        <div class="event-gradient"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
 
-        <div></div>
+
+
+
 
     </div>
+
+
+    <script>
+        function filterEvents() {
+            var filterValue = document.getElementById("filter").value;
+            var eventCards = document.querySelectorAll(".event-box");
+            eventCards.forEach(function (card) {
+                var classes = card.classList;
+
+                if (filterValue === "all") {
+                    card.style.display = "block"; 
+                } else if (classes.contains(filterValue)) {
+                    card.style.display = "block"; 
+                } else {
+                    card.style.display = "none"; 
+                }
+            });
+        }
+        document.getElementById("filter").addEventListener("change", filterEvents);
+        filterEvents();
+
+    </script>
 </body>
 
 </html>

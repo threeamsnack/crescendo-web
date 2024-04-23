@@ -227,4 +227,20 @@ porContacts.forEach(function (porContact) {
   });
 });
 
+function filterEvents() {
+  var filterValue = document.getElementById("filter").value;
+  var eventCards = document.querySelectorAll(".event-box");
+  eventCards.forEach(function (card) {
+      var classes = card.classList;
 
+      if (filterValue === "all") {
+          card.style.display = "block"; 
+      } else if (classes.contains(filterValue)) {
+          card.style.display = "block"; 
+      } else {
+          card.style.display = "none"; 
+      }
+  });
+}
+document.getElementById("filter").addEventListener("change", filterEvents);
+filterEvents();
