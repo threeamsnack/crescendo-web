@@ -185,6 +185,7 @@
 .event-register-link {
   height: max-content;
   align-self: self-end;
+  text-decoration: none;
 }
 
 #event-cards-container {
