@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=VT323&display=swap);
 
-@font-face {
-  font-family: "chakrapetch";
+/* @font-face {
+  font-family: "Chakra Petch";
   src: url(/fonts/ChakraPetch-Bold.woff2) format("truetype");
-}
+} */
 
 @font-face {
   font-family: "venusrising";
@@ -248,7 +248,7 @@ img {
   width: fit-content;
   color: #c9b7b7;
   font-size: 4vh;
-  font-family: chakrapetch;
+  font-family: Chakra Petch;
   background: #000;
   padding: 0.5vh 2vh;
   border: 1vh ridge #685b5b;
@@ -611,7 +611,7 @@ nav {
   display: flex;
   justify-content: center;
   padding: 1.5vh 1vh;
-  font-family: chakrapetch;
+  font-family: Chakra Petch;
   border-radius: 8vh;
   gap: 1vh;
   font-size: 2.5vh;
@@ -715,7 +715,7 @@ nav {
   color: #fff;
   text-align: center;
   font-size: 4vh;
-  font-family: "chakrapetch";
+  font-family: "Chakra Petch";
   margin-top: 27vh;
 }
 
@@ -736,7 +736,7 @@ nav {
 .contact-text,
 .contact-text-2 {
   color: #fff;
-  font-family: "chakrapetch";
+  font-family: "Chakra Petch";
   font-size: 3vh;
   margin-left: 11vh;
   margin-top: 3vh;
@@ -746,7 +746,7 @@ nav {
   font-size: 2.3vh;
   margin-top: 0.5vh;
   color: #000;
-  font-family: "chakrapetch";
+  font-family: "Chakra Petch";
 }
 
 .contact-data {
@@ -834,7 +834,7 @@ nav {
 .artist-txt {
   margin-top: -31px;
   margin-bottom: 4px;
-  font-family: "chakrapetch";
+  font-family: "Chakra Petch";
   color: #fff;
   padding: 0;
   font-size: 2rem;
@@ -866,7 +866,7 @@ nav {
 .artist-txt {
   margin-top: -31px;
   margin-bottom: 4px;
-  font-family: "chakrapetch";
+  font-family: "Chakra Petch";
   color: #fff;
   padding: 0;
   font-size: 2rem;
@@ -1024,7 +1024,7 @@ nav {
     width: fit-content;
     color: #c9b7b7;
     font-size: 4vh;
-    font-family: chakrapetch;
+    font-family: Chakra Petch;
     background: #000;
     padding: 0.5vh 2vh;
     border: 1vh ridge #685b5b;
@@ -1161,7 +1161,7 @@ nav {
     display: flex;
     justify-content: center;
     padding: 2.5vw 1vw;
-    font-family: chakrapetch;
+    font-family: Chakra Petch;
     border-radius: 8vh;
     gap: 1vh;
     font-size: 4vw;
@@ -1209,7 +1209,7 @@ nav {
   .contact-text,
   .contact-text-2 {
     color: #fff;
-    font-family: "chakrapetch";
+    font-family: "Chakra Petch";
     font-size: 4vw;
     margin-left: 9vw;
     margin-top: 3vh;
@@ -1341,7 +1341,7 @@ nav {
   .artist-txt {
     margin-top: -22px;
     margin-bottom: 4px;
-    font-family: "chakrapetch";
+    font-family: "Chakra Petch";
     color: #fff;
     font-size: 20px;
     padding: 0;
@@ -1461,7 +1461,7 @@ nav {
   height: 380px;
   background-color: #49494c61;
   text-align: center;
-  font-family: "chakrapetch";
+  font-family: "Chakra Petch";
   border-radius: 11px;
   filter: grayscale(0.8);
 }
