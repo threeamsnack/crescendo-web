@@ -831,8 +831,67 @@ nav {
   text-decoration: underline;
 }
 
+.artist-txt {
+  margin-top: -31px;
+  margin-bottom: 4px;
+  font-family: "chakrapetch";
+  color: #fff;
+  padding: 0;
+  font-size: 2rem;
+
+}
+
 .popup-container {
-  display: none;
+  display: block;
+  width: 25rem;
+  height: min-content;
+  background-color: #000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25rem;
+  border-radius: 8px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1005;
+  transform: translate(0%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  overflow: hidden;
+  padding-top: 41px;
+}
+
+.artist-txt {
+  margin-top: -31px;
+  margin-bottom: 4px;
+  font-family: "chakrapetch";
+  color: #fff;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.popup-container.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#close-btn-popup {
+  margin-left: 22rem;
+  margin-top: -29px;
+  position: absolute;
+  z-index: 9999;
+  font-size: 3rem;
+  opacity: 1;
+  display: block;
+  color: #fff;
+  font-size: xx-large;
+}
+
+.main-website.open {
+  filter: brightness(0.2);
+  pointer-events: none;
 }
 
 @media (max-width: 765px) {
@@ -1261,8 +1320,8 @@ nav {
   .popup-container {
     display: block;
     width: 16rem;
-    height: 17.46rem;
-    background-color: #5c5c70;
+    height: max-content;
+    background-color: #000;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -1276,32 +1335,16 @@ nav {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
   }
 
-  .popup-head {
+  .artist-txt {
+    margin-top: -22px;
+    margin-bottom: 4px;
+    font-family: "chakrapetch";
     color: #fff;
-    font-family: poppins;
-    padding: 0rem 19px 0.5rem 19px;
-    font-weight: 200;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .popup-vid {
-    width: 201px;
-    border-radius: 8px;
-  }
-
-  .fa-times {
-    font-size: 26px;
-    color: #fff;
-    margin-top: 10px;
-    margin-left: 13rem;
-  }
-
-  .main-website {
-    filter: none;
-    pointer-events: auto;
+    font-size: 20px;
+    padding: 0;
   }
 
   .popup-container.open {
@@ -1309,10 +1352,48 @@ nav {
     pointer-events: auto;
   }
 
-  .main-website.open {
-    filter: brightness(0.5);
-    pointer-events: none;
+  #close-btn-popup {
+    margin-left: 14rem;
+    margin-top: -23px;
+    position: absolute;
+    z-index: 9999;
+    font-size: 3rem;
+    opacity: 1;
+    display: block;
+    color: #fff;
+    font-size: 22px;
   }
+}
+
+.popup-head {
+  color: #fff;
+  font-family: poppins;
+  padding: 0rem 19px 0.5rem 19px;
+  font-weight: 200;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-vid {
+  width: 201px;
+  border-radius: 8px;
+}
+
+.fa-times {
+  font-size: 26px;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 13rem;
+}
+
+.main-website {
+  filter: none;
+  pointer-events: auto;
+}
+
+.main-website.open {
+  filter: brightness(0.2);
+  pointer-events: none;
 }
 
 .sponser-container {
