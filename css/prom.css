@@ -11,6 +11,8 @@ body {
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    margin-top: 9rem;
+    margin-bottom: 17rem;
   }
 
   h3 {
@@ -244,6 +246,8 @@ body {
       text-align: center;
       font-size: 17px;
       margin: 4rem 2rem;
+      margin-top: 9rem;
+    margin-bottom: 17rem;
     }
 
     .form-section {
