@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no" .>
+    <title>Prom Check-In</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: poppins;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #auth-cont {
+            background-color: #000;
+            color: #fff;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+            margin: auto;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            right: 0;
+        }
+
+        #logo {
+            width: 52rem;
+            margin: auto;
+            display: block;
+            margin-top: 6rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-family: poppins;
+            font-weight: 200;
+            margin-top: 21rem;
+        }
+
+        input,
+        button {
+            width: 43rem;
+            height: 7rem;
+        }
+
+        input {
+
+            border-radius: 8rem;
+            font-size: 2.2rem;
+            margin-top: 2rem;
+            text-align: center;
+            background-color: white;
+            border: 6px solid #2e2c2c;
+        }
+
+
+        button {
+            padding: 1rem 7rem;
+            font-size: 2.5rem;
+            border-radius: 19px;
+            margin-top: 5rem;
+            height: 7.3rem;
+            border-radius: 8rem;
+        }
+
+        button:hover {
+            background-color: black;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        .verif-cont-success,
+        .verif-cont-failed {
+            width: 48rem;
+            height: 40rem;
+
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: -35rem;
+            border-radius: 5rem;
+
+        }
+
+        .verif-cont-success {
+            background-color: #224217;
+            display: none;
+        }
+
+        .verif-cont-failed {
+            background-color: #6f2c2c;
+            display: none;
+        }
+
+        h3 {
+            font-size: 3rem;
+            display: flex;
+            align-items: center;
+            height: -webkit-fill-available;
+            justify-content: center;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="logo" src="/textures/crescendo-logo.png" alt="">
+
+
+
+    <div id="auth-cont">
+
+
+
+        <h1>Check-In for Prom</h1>
+        <form id="verificationForm">
+            <input type="tel" id="phoneNumber" name="phoneNumber" required
+                placeholder="Enter Registered Mobile Number"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="message">
+        </div>
+
+
+        <div id="successBox" class="verif-cont-success">
+            <h3>Verification Successful</h3>
+        </div>
+
+        <div id="failedBox" class="verif-cont-failed">
+            <h3>Verification Failed</h3>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('#verificationForm').submit(function (e) {
+                e.preventDefault();
+                var phoneNumber = $('#phoneNumber').val();
+                verifyPhoneNumber(phoneNumber);
+            });
+
+            function verifyPhoneNumber(phoneNumber) {
+                var spreadsheetId = '1uMSpMlb_xUsKPHUrrdhlI_vam8c6C8JoUeLLhUKAr_w';
+                var range = 'Sheet1!A:A';
+                var apiKey = 'AIzaSyAEmhvC348h4BSQgCF6tqLeMdE6nWITIm0';
+                var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + spreadsheetId + '/values/' + range + '?key=' + apiKey;
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function (response) {
+                        var values = response.values;
+                        var found = false;
+                        if (values && values.length > 0) {
+                            for (var i = 0; i < values.length; i++) {
+                                if (values[i][0] === phoneNumber) {
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+                        if (found) {
+                            $('#successBox').show();
+                            $('#failedBox').hide();
+                        } else {
+                            $('#successBox').hide();
+                            $('#failedBox').show();
+                        }
+                    },
+                    error: function () {
+                        $('#message').html('Error occurred during verification');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
