@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -127,10 +128,10 @@
 
 
         <h1>Check-In for Prom</h1>
-        <form id="verificationForm">
-            <input type="tel" id="phoneNumber" name="phoneNumber" required
+        <form id="verificationForm" method="POST" name="promresponses" enctype="multipart/form-data">
+            <input type="tel" id="phoneNumber" name="attendeeList" required
                 placeholder="Enter Registered Mobile Number"><br>
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit-btn">Submit</button>
         </form>
         <div id="message">
         </div>
@@ -146,7 +147,32 @@
     </div>
 
 
+    <script>
 
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby2DHpsEIfUdNU-H3VNNXOtaKlt3wxR6-6iyT0TSJA_JAbh7rmH8Fmxpt8cIsNK3SahTw/exec'
+
+        const form = document.forms['promresponses']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('#submit-btn');
+            submitBtn.disabled = true;
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => {
+                    // alert("Form is submitted successfully.");
+                    submitBtn.disabled = false;
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
 
     <script>
         $(document).ready(function () {
@@ -190,6 +216,11 @@
             }
         });
     </script>
+
+
+
+
+
 </body>
 
 </html>
