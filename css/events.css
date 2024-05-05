@@ -77,12 +77,12 @@
     hsl(0deg 0% 0% / 65%) 21%,
     hsl(0deg 0% 0% / 55%) 43%,
     hsl(0deg 0% 0% / 45%) 63%,
-    hsl(0deg 0% 0% / 35%) 78%,
-    hsl(0deg 0% 0% / 25%) 89%,
-    hsl(0deg 0% 0% / 15%) 96%,
-    hsl(0deg 0% 0% / 5%) 20%,
-    hsl(0deg 0% 0% / 3%) 0%,
-    hsl(0deg 0% 0% / 0%) 0%
+    hsl(0deg 0% 0% / 28%) 78%,
+    hsl(0deg 0% 0% / 19%) 89%,
+    hsl(0deg 0% 0% / 7%) 96%,
+    hsl(0deg 0% 0%) 20%,
+    hsl(0deg 0% 0% / 37%) 0%,
+    hsl(0deg 0% 0% / 5%) 0%
   );
   width: 127px;
   z-index: -1;
@@ -196,7 +196,6 @@
   margin-bottom: 13rem;
 }
 
-
 #filter {
   position: absolute;
   margin-top: -54px;
@@ -205,12 +204,12 @@
   border-radius: 5px;
   background-color: black;
   color: #fff;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   outline: 1px solid #888282ad;
 }
 
 #sort-txt {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 500;
 }
 
@@ -228,7 +227,7 @@
   border-style: dotted;
 }
 
-@media (max-width:765px) {
+@media (max-width: 765px) {
   #filter {
     position: absolute;
     margin-top: -48px;
@@ -237,7 +236,7 @@
     border-radius: 5px;
     background-color: black;
     color: #fff;
-    font-family: 'Poppins'
+    font-family: "Poppins";
   }
 
   #sort-txt {

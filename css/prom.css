@@ -9,10 +9,8 @@ body {
     font-family: poppins;
     font-weight: 100;
     text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    margin-top: 9rem;
-    margin-bottom: 17rem;
+    margin-top: 15rem;
+    margin-bottom: 13rem;
   }
 
   h3 {
@@ -246,8 +244,8 @@ body {
       text-align: center;
       font-size: 17px;
       margin: 4rem 2rem;
-      margin-top: 9rem;
-    margin-bottom: 17rem;
+      margin-top: 8rem;
+      margin-bottom: 16rem;
     }
 
     .form-section {
@@ -342,7 +340,7 @@ body {
       display: block;
       margin-right: auto;
       margin-left: auto;
-      margin-top: 14vw;
+      margin-top: 29vw;
       filter: grayscale(1);
     }
 
