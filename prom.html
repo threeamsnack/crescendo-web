@@ -66,32 +66,6 @@
   </div>
 
   <script src="scripts/prom.js"></script>
-  <script>
-
-    const scriptURL = 'https://script.google.com/macros/s/AKfycby2DHpsEIfUdNU-H3VNNXOtaKlt3wxR6-6iyT0TSJA_JAbh7rmH8Fmxpt8cIsNK3SahTw/exec'
-
-    const form = document.forms['promresponses']
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      const submitBtn = form.querySelector('#submit-btn');
-      submitBtn.disabled = true;
-
-      fetch(scriptURL, {
-        method: 'POST',
-        body: new FormData(form)
-      })
-        .then(response => {
-          alert("Form is submitted successfully.");
-          submitBtn.disabled = false;
-          form.reset();
-        })
-        .catch(error => {
-          console.error('Error!', error.message);
-          submitBtn.disabled = false;
-        });
-    });
-  </script>
 </body>
 
 </html>
