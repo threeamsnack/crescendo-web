@@ -894,6 +894,15 @@ nav {
   pointer-events: none;
 }
 
+
+.artist-txt-popup {
+  margin-top: -22px;
+  margin-bottom: 4px;
+  font-family: "Chakra Petch";
+  color: #fff;
+  font-size: 23px;
+}
+
 @media (max-width: 765px) {
   #loader-container {
     width: 190px;
@@ -1338,13 +1347,12 @@ nav {
     overflow: hidden;
   }
 
-  .artist-txt {
+  .artist-txt-popup {
     margin-top: -22px;
     margin-bottom: 4px;
     font-family: "Chakra Petch";
     color: #fff;
     font-size: 20px;
-    padding: 0;
   }
 
   .popup-container.open {
